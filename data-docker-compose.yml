@@ -1,0 +1,10 @@
+data:
+    hostname: birkas_orsi-data
+    image: birkas_orsi-base
+    command: start
+    container_name: birkas_orsi-data
+    volumes:
+        - "./container_shared:/container_shared"
+        - "./docker/base/config:/config"
+        - /data
+    entrypoint: ['python3', '/config/run.py']

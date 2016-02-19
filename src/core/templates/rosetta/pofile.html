@@ -1,0 +1,13 @@
+{% extends "rosetta/pofile.html" %}
+{% load i18n %}
+
+{% block header %}
+  <div id="user-tools">
+    <p>
+      <span><a href="{% url 'publish_rosetta' %}">
+        {% trans "Publish Translations" %}</a>
+      </span>
+    </p>
+  </div>
+{% endblock %}
+

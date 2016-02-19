@@ -1,0 +1,7 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% block welcome-msg %}
+    {{block.super}}
+    <a href="{% url 'rosetta-home' %}">{% trans 'Rosetta' %}</a> /
+{% endblock %}
+
