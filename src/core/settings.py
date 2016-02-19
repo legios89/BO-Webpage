@@ -44,7 +44,8 @@ INSTALLED_APPS = (
     'compressor',
     'rosetta',
     # project apps
-    'job'
+    'job',
+    'candidate'
 )
 
 MIDDLEWARE_CLASSES = (
