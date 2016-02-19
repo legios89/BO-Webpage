@@ -12,3 +12,18 @@ class Job(models.Model):
 
     def __str__(self):
         return('#%s %s' % (self.id, self.title))
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return('#%s %s' % (self.id, self.name))
+
+
+class JobCategory(models.Model):
+    job = models.ForeignKey(Job)
+    category = models.ForeignKey(Category)
+
+    def __str__(self):
+        return('#%s %s %s' % (self.id, self.job.title, self.category.name))
