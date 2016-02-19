@@ -43,6 +43,8 @@ INSTALLED_APPS = (
     'django_extensions',
     'compressor',
     'rosetta',
+    # project apps
+    'job'
 )
 
 MIDDLEWARE_CLASSES = (

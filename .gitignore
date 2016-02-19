@@ -5,3 +5,4 @@ env.txt
 container_shared/*
 !container_shared/.init
 react/node_modules/*
+src/core/static/react/app.js
