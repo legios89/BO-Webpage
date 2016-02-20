@@ -19,7 +19,7 @@ var Home = React.createClass({
           <div className="col-xs-6"
           style={{paddingTop: '60px', paddingBottom: '60px', paddingLeft: '0px',
           background: 'rgba(255,255,255,0.2);'}}>
-            <img src="http://placehold.it/700x400">
+            <img src="/static/img/about_me.jpg">
             </img>
           </div>
           <div className="col-xs-6 about-description"
