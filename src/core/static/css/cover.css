@@ -42,6 +42,17 @@ a, a:focus, a:hover, a:active {
   height: 300px;
 }
 
+.block-footer {
+  display: block;
+  height: 50px;
+}
+
+.social-icon {
+  margin-top: 13px;
+  font-size: 2em !important;
+  color: white !important
+}
+
  .welcome-image {
   background-size: cover;
   display: block;
