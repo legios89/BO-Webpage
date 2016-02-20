@@ -10,11 +10,13 @@ var Home = React.createClass({
     return (
       <div className="container-fluid" style={{marginTop: '50px'}}>
         <div className="row welcome-image">
-          <div className="pattern col-xs-12" style={{height: '600px'}}>
-            <h1 style={{color: '#2C3E50'}}>
-              {gettext('Toborzási és Kiválasztási Tanácsadó')}
-            </h1>
-          </div>
+          <div className="pattern col-xs-12 visible-xs" style={{height: '200px'}}></div>
+          <div className="pattern col-sm-12 visible-sm" style={{height: '250px'}}></div>
+          <div className="pattern col-md-12 visible-md" style={{height: '300px'}}></div>
+          <div className="pattern col-lg-12 visible-lg" style={{height: '400px'}}></div>
+          <h1 style={{color: '#2C3E50'}}>
+            {gettext('Toborzási és Kiválasztási Tanácsadó')}
+          </h1>
         </div>
         <div className="row">
           <div className="col-xs-6"
@@ -40,21 +42,29 @@ var Home = React.createClass({
           </div>
         </div>
         <div className="row">
-          <div className="block-job col-xs-3" style={{background: '#2F353B'}}>
+          <div className="block-job col-lg-3 col-md-4 col-sm-6 col-xs-12"
+               style={{background: '#2F353B'}}>
           </div>
-          <div className="block-job col-xs-3" style={{background: '#ACB5C3'}}>
+          <div className="block-job col-lg-3 col-md-4 col-sm-6 col-xs-12"
+               style={{background: '#ACB5C3'}}>
           </div>
-          <div className="block-job col-xs-3" style={{background: '#2F353B'}}>
+          <div className="block-job col-lg-3 col-md-4 col-sm-6 col-xs-12"
+               style={{background: '#67809F'}}>
           </div>
-          <div className="block-job col-xs-3" style={{background: '#ACB5C3'}}>
+          <div className="block-job col-lg-3 col-md-4 col-sm-6 col-xs-12"
+               style={{background: '#E1E5EC'}}>
           </div>
-          <div className="block-job col-xs-3" style={{background: '#ACB5C3'}}>
+          <div className="block-job col-lg-3 col-md-4 col-sm-6 col-xs-12"
+               style={{background: '#4C87B9'}}>
           </div>
-          <div className="block-job col-xs-3" style={{background: '#2F353B'}}>
+          <div className="block-job col-lg-3 col-md-4 col-sm-6 col-xs-12"
+               style={{background: '#E5E5E5'}}>
           </div>
-          <div className="block-job col-xs-3" style={{background: '#ACB5C3'}}>
+          <div className="block-job col-lg-3 col-md-4 col-sm-6 col-xs-12"
+               style={{background: '#4B77BE'}}>
           </div>
-          <div className="block-job col-xs-3" style={{background: '#2F353B'}}>
+          <div className="block-job col-lg-3 col-md-4 col-sm-6 col-xs-12"
+               style={{background: '#525E64'}}>
           </div>
         </div>
         <div className="row">
