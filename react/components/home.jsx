@@ -16,13 +16,38 @@ var Home = React.createClass({
           </div>
         </div>
         <div className="row">
-            <div className="block col-xs-6" style={{background: 'black'}}>
-            </div>
-            <div className="block col-xs-6" style={{background: 'red'}}>
-            </div>
+          <div className="col-xs-6"
+          style={{paddingTop: '60px', paddingBottom: '60px', paddingLeft: '0px',
+          background: 'rgba(255,255,255,0.2);'}}>
+            <img src="http://placehold.it/700x400">
+            </img>
+          </div>
+          <div className="col-xs-6 about-description"
+          style={{color: '#2C3E50', paddingTop: '60px'}}>
+          <h4><br><b>ÜDVÖZLÖM!</b></br><br></br>
+          <br>Birkás Orsolya vagyok,</br>
+          <br>Toborzási és Kiválasztási Tanácsadó</br>
+          </h4>
+          <h5 className="isay">2012 óta pályáztatok és közvetítek ki, kis, közép és multinacionális
+           cégeknek IT szakembereket, főkép fejlesztőket</h5>
+          </div>
         </div>
         <div className="row">
-            <div className="block col-xs-12" style={{background: 'yellow'}}>
+            <div className="block-job col-xs-3" style={{background: '#2F353B'}}>
+            </div>
+            <div className="block-job col-xs-3" style={{background: '#ACB5C3'}}>
+            </div>
+            <div className="block-job col-xs-3" style={{background: '#2F353B'}}>
+            </div>
+            <div className="block-job col-xs-3" style={{background: '#ACB5C3'}}>
+            </div>
+            <div className="block-job col-xs-3" style={{background: '#ACB5C3'}}>
+            </div>
+            <div className="block-job col-xs-3" style={{background: '#2F353B'}}>
+            </div>
+            <div className="block-job col-xs-3" style={{background: '#ACB5C3'}}>
+            </div>
+            <div className="block-job col-xs-3" style={{background: '#2F353B'}}>
             </div>
         </div>
         <div className="row">
