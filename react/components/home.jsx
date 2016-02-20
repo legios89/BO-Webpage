@@ -9,12 +9,14 @@ var Home = React.createClass({
   render: function () {
     return (
       <div>
-        <div className="row">
-            <div className="block col-xs-6">{gettext('It worked!')}
-            </div>
+        <div className="row welcome-image">
+          <div className="pattern col-lg-12" style={{height: '600px'}}>
+            <h1 style={{color: '#2C3E50'}}>
+            Toborzási és Kiválasztási Tanácsadó</h1>
+          </div>
         </div>
         <div className="row">
-            <div className=" col-xs-6" style={{background: 'black'}}>
+            <div className="block col-xs-6" style={{background: 'black'}}>
             </div>
             <div className="block col-xs-6" style={{background: 'red'}}>
             </div>
