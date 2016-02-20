@@ -6,14 +6,8 @@ var Job = require('./parts/job.jsx');
 
 var Home = React.createClass({
   propTypes: {
-    urls: React.PropTypes.object.isRequired
+    urls: React.PropTypes.object
   },
-
-  /* ************** */
-  /* DEFAULT VALUES */
-  /* ************** */
-  colors: ['#2F353B', '#ACB5C3', '#67809F', '#E1E5EC', '#4C87B9', '#E5E5E5',
-           '#4B77BE', '#525E64'],
 
   /* *************** */
   /* REACT LIFECYCLE */
@@ -41,9 +35,12 @@ var Home = React.createClass({
   },
 
   renderJobs: function () {
-    return this.state.jobs.map(function (job) {
+    var colors = ['#2F353B', '#ACB5C3', '#67809F', '#E1E5EC', '#4C87B9',
+                  '#E5E5E5', '#4B77BE', '#525E64'];
+    return this.state.jobs.map(function (job, key) {
+      console.log(key);
       return (
-        <Job job={job} key={job.id}/>
+        <Job job={job} color={colors[key % colors.length]} key={job.id}/>
       );
     });
   },
