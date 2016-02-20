@@ -6,17 +6,34 @@ var Home = React.createClass({
     urls: React.PropTypes.object
   },
 
+  renderWelcomeText: function () {
+    return (
+      <h1 style={{color: '#2C3E50'}}>
+        {gettext('Toborzási és Kiválasztási Tanácsadó')}
+      </h1>
+    );
+  },
+
   render: function () {
     return (
       <div className="container-fluid" style={{marginTop: '50px'}}>
         <div className="row welcome-image">
-          <div className="pattern col-xs-12 visible-xs" style={{height: '200px'}}></div>
-          <div className="pattern col-sm-12 visible-sm" style={{height: '250px'}}></div>
-          <div className="pattern col-md-12 visible-md" style={{height: '300px'}}></div>
-          <div className="pattern col-lg-12 visible-lg" style={{height: '400px'}}></div>
-          <h1 style={{color: '#2C3E50'}}>
-            {gettext('Toborzási és Kiválasztási Tanácsadó')}
-          </h1>
+          <div className="pattern col-xs-12 visible-xs"
+               style={{height: '200px'}}>
+            {this.renderWelcomeText()}
+          </div>
+          <div className="pattern col-sm-12 visible-sm"
+               style={{height: '250px'}}>
+            {this.renderWelcomeText()}
+          </div>
+          <div className="pattern col-md-12 visible-md"
+               style={{height: '300px'}}>
+            {this.renderWelcomeText()}
+          </div>
+          <div className="pattern col-lg-12 visible-lg"
+               style={{height: '400px'}}>
+            {this.renderWelcomeText()}
+          </div>
         </div>
         <div className="row">
           <div className="col-xs-12 col-md-6"

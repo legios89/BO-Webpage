@@ -67,8 +67,6 @@ a, a:focus, a:hover, a:active {
   left: auto;
   right: auto;
   padding: 0;
-  background: rgba(255,255,255,0.95);
-  margin-left: -15px !important;
 }
 
 .header-navigation {
@@ -105,7 +103,7 @@ a, a:focus, a:hover, a:active {
 
 .menu-bar {
   margin-right: -15px !important;
-  background: rgba(255,255,255,0.95);
+  margin-left: -15px !important;
 }
 
 .about-description {
@@ -115,11 +113,14 @@ a, a:focus, a:hover, a:active {
   text-transform: uppercase;
 }
 
-
 .isay {
     margin: 70px 0 24px -20px;
     font-size: 24px;
     color: #00a280;
     position: relative;
     clear: both;
+}
+
+.soft-white-bg {
+  background: rgba(255,255,255,0.95);
 }

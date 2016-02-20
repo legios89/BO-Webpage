@@ -23,7 +23,7 @@ var App = React.createClass({
     return (
       <div className="site-wrapper-inner">
         <nav className="navbar navbar-fixed-top">
-          <div className="container-fluid">
+          <div className="container-fluid soft-white-bg">
             <div className="navbar-header header">
               <button type="button" className="navbar-toggle collapsed"
                       data-toggle="collapse" data-target="#navbar"
@@ -41,7 +41,7 @@ var App = React.createClass({
             <div id="navbar" className="navbar-collapse collapse menu-bar">
               <div className="pull-right">
                 <ul className="header-navigation">
-                  <li><a href="">{gettext('Kezdőlap')}</a></li>
+                  <li><a href=""><i className="fa fa-home"></i></a></li>
                   <li><a href="">{gettext('Rólam')}</a></li>
                   <li><a href="">{gettext('Állások')}</a></li>
                 </ul>
