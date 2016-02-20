@@ -10,6 +10,11 @@ body {
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
+@font-face {
+  font-family: "PT Sans Narrow";
+  src: url(/static/fonts/pt_sans_narrow.woff2) format("truetype");
+}
+
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
   display: table;
@@ -17,12 +22,15 @@ body {
   height: 100%; /* For at least Firefox */
   min-height: 100%;
   -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  box-shadow: inset 0 0 100px rgba(0,0,0,.5);
 }
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
+
+a, a:focus, a:hover, a:active {
+  color: #e6400c;
+  outline: 0;
+  text-decoration: none;
 }
+
 
 .block {
   display: block;
@@ -36,97 +44,67 @@ body {
  }
 
  .welcome-image {
-    background-size: cover;
-    display: block;
-    background-image: url(/static/img/bg.jpg);
-    height: auto;
-    background-attachment: fixed;
-    z-index: 1;
+  background-size: cover;
+  display: block;
+  background-image: url(/static/img/bg.jpg);
+  height: auto;
+  background-attachment: fixed;
+  z-index: 1;
  }
 
  .pattern {
-    width: 100%;
-    display: block;
-    background-image: url(/static/img/pattern.png);
-    height: 100%;
-    background-attachment: fixed;
-    position: relative;
-    z-index: 1;
+  width: 100%;
+  display: block;
+  background-image: url(/static/img/pattern.png);
+  height: 100%;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
 }
 
 .header {
-    position: absolute;
-    top: auto;
-    bottom: 0;
-    left: auto;
-    right: auto;
-    z-index: 9;
-    width: 100%;
-    min-height: 60px;
-    padding: 0;
-    background: rgba(255,255,255,0.95);
-    box-shadow: 0 1px 4px rgba(228, 228, 228, 0.95);
-    z-index: 9999;
-    padding-top: 10px;
-  }
-
-  .site-logo {
-      float: left;
-      padding-top: 19px;
-  }
-
-  .header .mobi-toggler {
-    float: right;
-    color: #D8D8D8;
-    border: 1px solid #D8D8D8;
-    border-radius: 100% !important;
-    width: 32px;
-    height: 32px;
-    display: none;
-    margin: 15px 15px 0;
-    position: relative;
-    /* background: url(../img/toggler.png) no-repeat 6px 8px; */
+  top: auto;
+  bottom: 0;
+  left: auto;
+  right: auto;
+  padding: 0;
+  background: rgba(255,255,255,0.95);
+  margin-left: -15px !important;
 }
 
 .header-navigation {
-    float: right;
-    list-style: none;
-    padding: 19px 0 0;
-    margin: 0;
-    font: 400 18px "PT Sans Narrow", Arial, sans-serif;
-    text-transform: uppercase;
+  padding: 15px 15px 0;
+  margin: 0;
+  font: 400 18px "PT Sans Narrow", Arial, sans-serif;
+  text-transform: uppercase;
 }
-
-media (min-width: 1025px)
-.header .header-navigation {
-    display: block !important;
-}
-
 
 .header-navigation li {
-    float: left;
-    padding: 0;
-    margin: 0 0 0 25px;
-}
-
-a, a:focus, a:hover, a:active {
-    color: #e6400c;
-    outline: 0;
-    text-decoration: none;
+  float: left;
+  padding: 0;
+  margin: 0 0 10px 25px;
 }
 
 .header-navigation a {
-    display: block;
-    color: #78828c;
-}
-
-@font-face {
-  font-family: "Proba";
-  src: url(/static/fonts/asd.woff2) format("truetype");
+  display: block;
+  color: rgb(95, 111, 126);
 }
 
 .logo {
-font: 400 19px "Proba", Arial, sans-serif;
-    text-transform: uppercase;
-    text-align: center;
+  font: 400 19px "PT Sans Narrow", Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.navbar-toggle span {
+  background: rgb(95, 111, 126);
+}
+
+.navbar-brand {
+  margin-left: 0px !important;
+}
+
+.menu-bar {
+  margin-right: -15px !important;
+  background: rgba(255,255,255,0.95);
 }
