@@ -47,7 +47,7 @@ var App = React.createClass({
             </div>
           </div>
         </nav>
-        <div className="container-fluid" style={{marginTop: '31px'}}>
+        <div className="container-fluid" style={{marginTop: '51px'}}>
           {React.cloneElement(this.props.children, {urls: this.state.urls})}
         </div>
       </div>);

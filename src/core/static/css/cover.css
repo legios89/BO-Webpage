@@ -23,3 +23,13 @@ body {
   display: table-cell;
   vertical-align: top;
 }
+
+.block {
+  display: block;
+  height: 600px;
+}
+ .footer {
+   display: block;
+   height: 300px;
+   background: black;
+ }
