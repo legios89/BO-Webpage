@@ -8,7 +8,7 @@ var Home = React.createClass({
 
   renderWelcomeText: function () {
     return (
-      <h1 style={{color: '#2C3E50'}}>
+      <h1 style={{color: '#2C3E50', marginTop: '70px'}}>
         {gettext('Toborzási és Kiválasztási Tanácsadó')}
       </h1>
     );
@@ -16,7 +16,7 @@ var Home = React.createClass({
 
   render: function () {
     return (
-      <div className="container-fluid" style={{marginTop: '50px'}}>
+      <div className="container-fluid" style={{marginTop: '50px'}} id="home">
         <div className="row welcome-image">
           <div className="pattern col-xs-12 visible-xs"
                style={{height: '200px'}}>
@@ -35,7 +35,7 @@ var Home = React.createClass({
             {this.renderWelcomeText()}
           </div>
         </div>
-        <div className="row">
+        <div className="row" id="about_me">
           <div className="col-xs-12 col-md-6"
           style={{paddingLeft: '0px'}}>
             <img src="/static/img/about_me.jpg" style={{width: '100%'}}>
@@ -57,7 +57,7 @@ var Home = React.createClass({
             </h5>
           </div>
         </div>
-        <div className="row">
+        <div className="row" id="jobs">
           <div className="block-job col-lg-3 col-md-4 col-sm-6 col-xs-12"
                style={{background: '#2F353B'}}>
           </div>
