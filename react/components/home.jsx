@@ -19,13 +19,12 @@ var Home = React.createClass({
           </h1>
         </div>
         <div className="row">
-          <div className="col-xs-6"
-          style={{paddingTop: '60px', paddingBottom: '60px', paddingLeft: '0px',
-          background: 'rgba(255,255,255,0.2)'}}>
-            <img src="/static/img/about_me.jpg" style={{height: '400px'}}>
+          <div className="col-xs-12 col-md-6"
+          style={{paddingLeft: '0px'}}>
+            <img src="/static/img/about_me.jpg" style={{width: '100%'}}>
             </img>
           </div>
-          <div className="col-xs-6 about-description"
+          <div className="col-xs-12 col-md-6 about-description"
                style={{color: '#2C3E50', paddingTop: '60px'}}>
             <h4>
               <b>{gettext('Üdvözlöm!')}</b><br/>
@@ -68,14 +67,17 @@ var Home = React.createClass({
           </div>
         </div>
         <div className="row">
-          <div className="footer col-xs-12">
-            <a target="_blank" href="">
+          <div className="col-xs-12 col-md-6" style={{background: '#8775A7'}}>
+            <p>e-mail:</p>
+          </div>
+          <div className="col-xs-12 col-md-6" style={{background: '#8877A9'}}>
+            <a href="">
               <i className="fa fa-facebook"></i>
             </a>
-            <a target="_blank" href="">
+            <a href="">
               <i className="fa fa-twitter"></i>
             </a>
-            <a target="_blank" href="">
+            <a href="">
               <i className="fa fa-linkedin"></i>
             </a>
           </div>
