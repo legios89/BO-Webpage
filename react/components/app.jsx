@@ -19,6 +19,14 @@ var App = React.createClass({
     });
   },
 
+  scrollTo: function (event) {
+    var target = event.target.dataset.target;
+    if (target === 'home') {
+      window.scrollTo(0, 0);
+    }
+    document.getElementById(target).scrollIntoView();
+  },
+
   render: function () {
     return (
       <div className="site-wrapper-inner">
@@ -41,9 +49,24 @@ var App = React.createClass({
             <div id="navbar" className="navbar-collapse collapse menu-bar">
               <div className="pull-right">
                 <ul className="header-navigation">
-                  <li><a href=""><i className="fa fa-home"></i></a></li>
-                  <li><a href="">{gettext('Rólam')}</a></li>
-                  <li><a href="">{gettext('Állások')}</a></li>
+                  <li>
+                    <a href="javascript:void(0);" onClick={this.scrollTo}
+                       data-target="home">
+                      <i className="fa fa-home" data-target="home"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" onClick={this.scrollTo}
+                       data-target="about_me">
+                      {gettext('Rólam')}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" onClick={this.scrollTo}
+                       data-target="jobs">
+                      {gettext('Állások')}
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
