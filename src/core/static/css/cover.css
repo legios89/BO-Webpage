@@ -37,6 +37,11 @@ a, a:focus, a:hover, a:active {
   height: 600px;
 }
 
+.block-job {
+  display: block;
+  height: 300px;
+}
+
 .footer {
    display: block;
    height: 200px;
@@ -107,4 +112,20 @@ a, a:focus, a:hover, a:active {
 .menu-bar {
   margin-right: -15px !important;
   background: rgba(255,255,255,0.95);
+}
+
+.about-description {
+  text-align: left;
+  padding-left: 70px;
+  font: normal 18px "Montserrat","Open sans",Arial,sans-serif;
+  text-transform: uppercase;
+}
+
+
+.isay {
+    margin: 70px 0 24px -20px;
+    font-size: 24px;
+    color: #00a280;
+    position: relative;
+    clear: both;
 }
