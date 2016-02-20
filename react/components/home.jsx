@@ -1,11 +1,37 @@
-/* global gettext */
+/* global gettext, $ */
 var React = require('react');
+
+/* Components */
+var Job = require('./parts/job.jsx');
 
 var Home = React.createClass({
   propTypes: {
-    urls: React.PropTypes.object
+    urls: React.PropTypes.object.isRequired
   },
 
+  /* ************** */
+  /* DEFAULT VALUES */
+  /* ************** */
+  colors: ['#2F353B', '#ACB5C3', '#67809F', '#E1E5EC', '#4C87B9', '#E5E5E5',
+           '#4B77BE', '#525E64'],
+
+  /* *************** */
+  /* REACT LIFECYCLE */
+  /* *************** */
+  getInitialState: function () {
+    return {jobs: []};
+  },
+
+  componentWillMount: function () {
+    var self = this;
+    $.get(this.props.urls.job_list, function (response) {
+      self.setState({jobs: response});
+    });
+  },
+
+  /* ************* */
+  /* RENDER BLOCKS */
+  /* ************* */
   renderWelcomeText: function () {
     return (
       <h1 style={{color: '#2C3E50', marginTop: '70px'}}>
@@ -14,6 +40,17 @@ var Home = React.createClass({
     );
   },
 
+  renderJobs: function () {
+    return this.state.jobs.map(function (job) {
+      return (
+        <Job job={job} key={job.id}/>
+      );
+    });
+  },
+
+  /* *********** */
+  /* MAIN RENDER */
+  /* *********** */
   render: function () {
     return (
       <div className="container-fluid" style={{marginTop: '50px'}} id="home">
@@ -58,30 +95,7 @@ var Home = React.createClass({
           </div>
         </div>
         <div className="row" id="jobs">
-          <div className="block-job col-lg-3 col-md-4 col-sm-6 col-xs-12"
-               style={{background: '#2F353B'}}>
-          </div>
-          <div className="block-job col-lg-3 col-md-4 col-sm-6 col-xs-12"
-               style={{background: '#ACB5C3'}}>
-          </div>
-          <div className="block-job col-lg-3 col-md-4 col-sm-6 col-xs-12"
-               style={{background: '#67809F'}}>
-          </div>
-          <div className="block-job col-lg-3 col-md-4 col-sm-6 col-xs-12"
-               style={{background: '#E1E5EC'}}>
-          </div>
-          <div className="block-job col-lg-3 col-md-4 col-sm-6 col-xs-12"
-               style={{background: '#4C87B9'}}>
-          </div>
-          <div className="block-job col-lg-3 col-md-4 col-sm-6 col-xs-12"
-               style={{background: '#E5E5E5'}}>
-          </div>
-          <div className="block-job col-lg-3 col-md-4 col-sm-6 col-xs-12"
-               style={{background: '#4B77BE'}}>
-          </div>
-          <div className="block-job col-lg-3 col-md-4 col-sm-6 col-xs-12"
-               style={{background: '#525E64'}}>
-          </div>
+          {this.renderJobs()}
         </div>
         <div className="row" style={{background: '#E9EDEF'}}>
           <div className="block-footer col-xs-12 col-md-5 about-description"
@@ -115,7 +129,9 @@ var Home = React.createClass({
                 </a>
               </div>
               <div>
-              <h6 style={{color: '#2C3E50'}}>Webdesign & sitebuild: E_Bro</h6>
+                <h6 style={{color: '#2C3E50', marginBottom: '0px'}}>
+                  Webdesign & sitebuild: E_Bro
+                </h6>
               </div>
             </div>
           </div>

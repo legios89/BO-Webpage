@@ -8,14 +8,14 @@ var App = React.createClass({
   },
 
   getInitialState: function () {
-    return {urls: {}};
+    return {urls: {}, canLoad: false};
   },
 
   componentWillMount: function () {
     var self = this;
     var url = '/' + this.props.route.language + '/api/urls/';
     $.get(url, function (response) {
-      self.setState({urls: response});
+      self.setState({urls: response, canLoad: true});
     });
   },
 
@@ -28,6 +28,9 @@ var App = React.createClass({
   },
 
   render: function () {
+    if (!this.state.canLoad) {
+      return (<span></span>);
+    }
     return (
       <div className="site-wrapper-inner">
         <nav className="navbar navbar-fixed-top">

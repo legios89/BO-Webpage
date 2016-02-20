@@ -23,4 +23,6 @@ class HomePageView(TemplateView):
 
 class UrlsApi(APIView):
     def get(self, request, format=None):
-        return Response({'admin_index': reverse('admin:index')})
+        return Response({
+            'job_list': reverse('job:api_job_list'),
+        })

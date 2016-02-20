@@ -18,7 +18,7 @@ urlpatterns = i18n_patterns(
     url(r'^jsi18n/$', javascript_catalog, name='javascript-catalog'),
     url(r'^api/urls/$', UrlsApi.as_view(), name='api_urls'),
     url(r'^rosetta/', include('rosetta.urls')),
-    url(r'^api/job/', include('job.urls')),
+    url(r'^api/job/', include('job.urls', namespace='job')),
     url(r'^publish/rosetta/', PublishRosetta.as_view(), name='publish_rosetta')
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
