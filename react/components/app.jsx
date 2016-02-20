@@ -23,33 +23,33 @@ var App = React.createClass({
     return (
       <div className="site-wrapper-inner">
         <nav className="navbar navbar-fixed-top">
-          <div className="header header-mobi-ext">
-            <div className="container">
-              <div className="row">
-                <div className="col-md-2 col-sm-2">
-                  <h4 style={{marginTop: '13px'}} className="logo">
-                    <span style={{color: '#E6400C'}}>Birkás </span>
-                    <span style={{color: 'rgb(95, 111, 126)'}}>Orsolya</span>
-                  </h4>
-                </div>
-
-                <a href="" className="mobi-toggler">
-                  <i className="fa fa-bars"></i>
-                </a>
-                <div className="col-md-10 pull-right">
-                  <ul className="header-navigation">
-                    <li className="current"><a href="#promo-block">Home</a></li>
-                    <li><a href="#about">About me</a></li>
-                    <li><a href="#services">Jobs</a></li>
-                  </ul>
-                </div>
+          <div className="container-fluid">
+            <div className="navbar-header header">
+              <button type="button" className="navbar-toggle collapsed"
+                      data-toggle="collapse" data-target="#navbar"
+                      aria-expanded="false" aria-controls="navbar">
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+              </button>
+              <a className="navbar-brand" href="#">
+                <h4 style={{marginTop: '0px'}} className="logo">
+                <span style={{color: '#E6400C'}}>Birkás </span>
+                <span style={{color: 'rgb(95, 111, 126)'}}>Orsolya</span>
+              </h4></a>
+            </div>
+            <div id="navbar" className="navbar-collapse collapse menu-bar">
+              <div className="pull-right">
+                <ul className="header-navigation">
+                  <li><a href="">{gettext('Kezdőlap')}</a></li>
+                  <li><a href="">{gettext('Rólam')}</a></li>
+                  <li><a href="">{gettext('Állások')}</a></li>
+                </ul>
               </div>
             </div>
           </div>
         </nav>
-        <div className="container-fluid" style={{marginTop: '50px'}}>
-          {React.cloneElement(this.props.children, {urls: this.state.urls})}
-        </div>
+        {React.cloneElement(this.props.children, {urls: this.state.urls})}
       </div>);
   }
 });
