@@ -13,7 +13,7 @@ var Home = require('./home.jsx');
 
 var NotFoundRoute = React.createClass({
   render: function () {
-    return (<div>{gettext('NOT FOUND')}</div>);
+    return (<div>{gettext('Nem Található!')}</div>);
   }
 });
 

@@ -41,17 +41,15 @@ var App = React.createClass({
             <div id="navbar" className="navbar-collapse collapse menu-bar">
               <div className="pull-right">
                 <ul className="header-navigation">
-                  <li><a href="">Home</a></li>
-                  <li><a href="">About me</a></li>
-                  <li><a href="">Jobs</a></li>
+                  <li><a href="">{gettext('Kezdőlap')}</a></li>
+                  <li><a href="">{gettext('Rólam')}</a></li>
+                  <li><a href="">{gettext('Állások')}</a></li>
                 </ul>
               </div>
             </div>
           </div>
         </nav>
-        <div className="container-fluid" style={{marginTop: '50px'}}>
-          {React.cloneElement(this.props.children, {urls: this.state.urls})}
-        </div>
+        {React.cloneElement(this.props.children, {urls: this.state.urls})}
       </div>);
   }
 });

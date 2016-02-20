@@ -102,8 +102,8 @@ CACHES = {
     }
 }
 
-LANGUAGE_CODE = 'en'
-LANGUAGES = [('en', _('English'))]
+LANGUAGE_CODE = 'hu'
+LANGUAGES = [('hu', _('Hungarian'))]
 LOCALE_PATHS = ('/data/locale/',)
 if getvar('YANDEX_TRANSLATE_KEY', required=False):
     ROSETTA_ENABLE_TRANSLATION_SUGGESTIONS = True
