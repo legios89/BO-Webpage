@@ -22,23 +22,33 @@ var App = React.createClass({
   render: function () {
     return (
       <div className="site-wrapper-inner">
-        <div className="cover-container">
-          <div className="masthead clearfix">
-            <div className="inner">
-              <h3 className="masthead-brand">{gettext('Home')}</h3>
-              <nav>
-                <ul className="nav masthead-nav">
-                  <li className="active"><a href="">{gettext('Home')}</a></li>
-                  <li>
-                    <a href={this.state.urls.admin_index}>{gettext('Admin')}</a>
-                  </li>
-                </ul>
-              </nav>
+        <nav className="navbar navbar-fixed-top navbar-inverse">
+          <div className="container">
+            <div className="navbar-header">
+              <button type="button"
+                      className="navbar-toggle collapsed"
+                      data-toggle="collapse"
+                      data-target="#navbar"
+                      aria-expanded="false"
+                      aria-controls="navbar">
+                <span className="sr-only"></span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+              </button>
+              <a className="navbar-brand" href="#">Birkás Orsolya</a>
+            </div>
+            <div id="navbar" className="collapse navbar-collapse">
+              <ul className="nav navbar-nav">
+                <li className="active"><a href="#">{gettext('Home')}</a></li>
+                <li><a href="#">{gettext('About me')}</a></li>
+                <li><a href="#">{gettext('Jobs')}</a></li>
+              </ul>
             </div>
           </div>
-          <div className="inner cover">
-            {React.cloneElement(this.props.children, {urls: this.state.urls})}
-          </div>
+        </nav>
+        <div className="container-fluid" style={{marginTop: '31px'}}>
+          {React.cloneElement(this.props.children, {urls: this.state.urls})}
         </div>
       </div>);
   }
