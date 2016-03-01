@@ -70,13 +70,13 @@ var Home = React.createClass({
           </div>
         </div>
         <div className="row" id="about_me">
-          <div className="col-xs-12 col-md-6"
+          <div className="col-xs-12 col-md-6 col-lg-6"
           style={{paddingLeft: '0px'}}>
             <img src="/static/img/about_me.jpg" style={{width: '100%'}}>
             </img>
           </div>
-          <div className="col-xs-12 col-md-6 about-description"
-               style={{color: '#2C3E50', paddingTop: '60px'}}>
+          <div className="col-xs-12 col-md-6 col-lg-6 about-description"
+               style={{color: '#2C3E50'}}>
             <h4>
               <b>{gettext('Üdvözlöm!')}</b><br/>
               <span>{gettext('Birkás Orsolya vagyok.')}</span><br/>
