@@ -85,6 +85,7 @@ a, a:focus, a:hover, a:active {
   margin: 0;
   font: 400 18px "PT Sans Narrow", Arial, sans-serif;
   text-transform: uppercase;
+  list-style-type: none;
 }
 
 .header-navigation li {
