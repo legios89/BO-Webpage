@@ -38,7 +38,6 @@ var Home = React.createClass({
     var colors = ['#2F353B', '#ACB5C3', '#67809F', '#E1E5EC', '#4C87B9',
                   '#E5E5E5', '#4B77BE', '#525E64'];
     return this.state.jobs.map(function (job, key) {
-      console.log(key);
       return (
         <Job job={job} color={colors[key % colors.length]} key={job.id}/>
       );
@@ -69,13 +68,12 @@ var Home = React.createClass({
             {this.renderWelcomeText()}
           </div>
         </div>
-        <div className="row" id="about_me">
-          <div className="col-xs-12 col-md-6 col-lg-6"
-          style={{paddingLeft: '0px'}}>
+         <div className="row content-row" id="about_me">
+          <div className="col-sm-6 no-padding">
             <img src="http://placehold.it/700x400" style={{width: '100%'}}>
             </img>
           </div>
-          <div className="col-xs-12 col-md-6 col-lg-6 about-description"
+          <div className="col-sm-6 about-description"
                style={{color: '#2C3E50'}}>
             <h4>
               <b>{gettext('Üdvözlöm!')}</b><br/>
@@ -91,45 +89,39 @@ var Home = React.createClass({
             </h5>
           </div>
         </div>
-        <div className="row" id="jobs">
+        <div className="row content-row" id="jobs">
           {this.renderJobs()}
         </div>
-        <div className="row" style={{background: '#E9EDEF'}}>
-          <div className="block-footer col-xs-12 col-md-5 about-description"
-               style={{color: '#2C3E50'}}>
-            <span>Birkas Orsolya,<br></br>
-            Toborzási és Kiválasztási Tanácsadó</span>
+        <div className="row content-row page-footer">
+          <div className="col-sm-7 about-description">
+            <div>
+              <span>E-mail: orsolya.birkas@adecco.com</span><br/>
+              <span>Telefon: 06308689742</span>
+            </div>
           </div>
-          <div className="col-xs-12 col-md-7">
-            <div className="row">
-              <div className="block-footer col-xs-7 about-description"
-                   style={{color: '#2C3E50', paddingLeft: '0px'}}>
-                <span>E-mail: orsolya.birkas@adecco.com<br></br>
-                Telefon: 06308689742</span>
-              </div>
-              <div className="block-footer col-xs-1 col-xs-offset-1"
+          <div className="col-sm-5">
+            <div className="col-xs-12">
+              <div className="block-footer col-xs-3 col-xs-offset-1"
                    style={{background: '#3b5998'}}>
                 <a href="">
                   <i className="fa fa-facebook social-icon"></i>
                 </a>
               </div>
-              <div className="block-footer col-xs-1"
+              <div className="block-footer col-xs-3"
               style={{background: '#4099FF'}}>
                 <a href="">
                   <i className="fa fa-twitter social-icon"></i>
                 </a>
               </div>
-              <div className="block-footer col-xs-1"
+              <div className="block-footer col-xs-3"
               style={{background: '#0e76A8'}}>
                 <a href="">
                   <i className="fa fa-linkedin social-icon"></i>
                 </a>
               </div>
-              <div>
-                <h6 style={{color: '#2C3E50', marginBottom: '0px'}}>
-                  Webdesign & sitebuild: E_Bro
-                </h6>
-              </div>
+            </div>
+            <div className="col-xs-12">
+              <span>{gettext('Webdesign & Sitebuild')} E&Bro</span>
             </div>
           </div>
         </div>

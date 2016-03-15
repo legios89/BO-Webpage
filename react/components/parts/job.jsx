@@ -1,5 +1,5 @@
+/* global gettext*/
 var React = require('react');
-
 
 var Job = React.createClass({
   propTypes: {
@@ -9,16 +9,18 @@ var Job = React.createClass({
 
   render: function () {
     return (
-      <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12"
+      <div className="col-md-3 col-sm-4 col-xs-6"
            style={{background: this.props.color}}>
-        <div className="portlet light portlet-fit bordered">
+        <div className="portlet">
           <div className="portlet-title">
             <div className="caption">
-              <i className=" icon-layers font-green"></i>
-              <span className="caption-subject font-green bold uppercase">
-                <div className="caption-desc font-grey-cascade">
-                  <pre className="mt-code">{this.props.job.title}</pre></div>
+              <span className="caption-subject bold uppercase">
+                {this.props.job.title}
               </span>
+              <div>
+                <pre className="mt-code">php</pre>
+                <pre className="mt-code">nodejs</pre>
+              </div>
             </div>
           </div>
           <div className="portlet-body">
@@ -30,7 +32,7 @@ var Job = React.createClass({
                     <div className="mt-overlay">
                       <h2>{this.props.job.title}</h2>
                       <a className="mt-info btn btn-default" href="#">
-                        Learn More
+                        {gettext('Részletek')}
                       </a>
                     </div>
                   </div>

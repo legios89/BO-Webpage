@@ -109,3 +109,41 @@
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
+
+.bold {
+  font-weight: 700!important;
+}
+
+.font-green {
+  color: #32c5d2!important;
+}
+.uppercase {
+  text-transform: uppercase!important;
+}
+
+.mt-code {
+  padding: 3px;
+  color: #E43A45;
+  border-radius: 4px!important;
+  display: inline;
+  word-wrap: normal;
+}
+
+.caption-subject {
+  font-size: 16px;
+}
+
+.portlet-title, .portlet-body {
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.page-title {
+  padding: 0;
+  font-size: 28px;
+  letter-spacing: -1px;
+  display: block;
+  color: #666;
+  margin: 0 0 15px;
+  font-weight: 300;
+}

@@ -8,6 +8,7 @@ body {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  background-color: #f2ebe6;
 }
 
 @font-face {
@@ -21,14 +22,19 @@ body {
   width: 100%;
   height: 100%; /* For at least Firefox */
   min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-  box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  /*-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
 }
 
 a, a:focus, a:hover, a:active {
   color: #e6400c;
   outline: 0;
   text-decoration: none;
+}
+
+.no-padding {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 
@@ -43,12 +49,11 @@ a, a:focus, a:hover, a:active {
 }
 
 .block-footer {
-  display: block;
-  height: 50px;
+  /*height: 40px;*/
 }
 
 .social-icon {
-  margin-top: 13px;
+  margin-top: 4px;
   font-size: 2em !important;
   color: white !important
 }
@@ -56,7 +61,7 @@ a, a:focus, a:hover, a:active {
  .welcome-image {
   background-size: cover;
   display: block;
-  background-image: url(/static/img/bg.jpg);
+  /*background-image: url(/static/img/bg.jpg);*/
   height: auto;
   background-attachment: fixed;
   z-index: 1;
@@ -119,13 +124,11 @@ a, a:focus, a:hover, a:active {
 }
 
 .about-description {
-  text-align: center;
   font: normal 18px "Montserrat","Open sans",Arial,sans-serif;
-  text-transform: uppercase;
 }
 
 .isay {
-    margin: 70px 0 24px -20px;
+    margin: 50px 0 24px 0px;
     font-size: 24px;
     color: #00a280;
     position: relative;
@@ -134,4 +137,18 @@ a, a:focus, a:hover, a:active {
 
 .soft-white-bg {
   background: rgba(255,255,255,0.95);
+}
+
+.page-footer {
+    padding: 8px 20px 5px;
+    font-size: 13px;
+    background-color: #2F353B;
+}
+
+.content-row {
+  margin-top: 60px;
+}
+
+.mt-code {
+  margin-right: 2px;
 }
