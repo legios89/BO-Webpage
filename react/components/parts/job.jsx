@@ -3,7 +3,7 @@ var React = require('react');
 
 var Job = React.createClass({
   propTypes: {
-    job: React.PropTypes.object.isRequired,
+    job  : React.PropTypes.object.isRequired,
     color: React.PropTypes.string.isRequired
   },
 
@@ -26,7 +26,7 @@ var Job = React.createClass({
               <div className="row">
                 <div className="col-md-12">
                   <div className="mt-overlay-4">
-                    <img src="/static/img/06.jpg" />
+                    <img src="http://placehold.it/600x600"/>
                     <div className="mt-overlay">
                       <h2>{this.props.job.title}</h2>
                       <a className="mt-info btn btn-default" href="#">

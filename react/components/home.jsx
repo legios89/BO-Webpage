@@ -72,7 +72,7 @@ var Home = React.createClass({
         <div className="row" id="about_me">
           <div className="col-xs-12 col-md-6 col-lg-6"
           style={{paddingLeft: '0px'}}>
-            <img src="/static/img/about_me.jpg" style={{width: '100%'}}>
+            <img src="http://placehold.it/700x400" style={{width: '100%'}}>
             </img>
           </div>
           <div className="col-xs-12 col-md-6 col-lg-6 about-description"
