@@ -139,17 +139,17 @@ var Home = React.createClass({
             <div className="col-xs-12">
               <div className="col-xs-1"></div>
               <div className="block-footer col-xs-3" style={{background: '#3b5998'}}>
-                <a href="">
+                <a href="https://www.facebook.com/orsolya.birkas">
                   <i className="fa fa-facebook social-icon"></i>
                 </a>
               </div>
               <div className="block-footer col-xs-3" style={{background: '#4099FF'}}>
-                <a href="">
+                <a href="https://twitter.com/BirkasOrsolya">
                   <i className="fa fa-twitter social-icon"></i>
                 </a>
               </div>
               <div className="block-footer col-xs-3" style={{background: '#0e76A8'}}>
-                <a href="">
+                <a href="https://hu.linkedin.com/in/orsolya-birkás-a552a697">
                   <i className="fa fa-linkedin social-icon"></i>
                 </a>
               </div>
