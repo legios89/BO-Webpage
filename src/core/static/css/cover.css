@@ -16,14 +16,13 @@ body {
   src: url(/static/fonts/pt_sans_narrow.woff2) format("truetype");
 }
 
-/* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
   display: table;
   width: 100%;
   height: 100%; /* For at least Firefox */
   min-height: 100%;
-  /*-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-  box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  box-shadow: inset 0 0 100px rgba(0,0,0,.5);
 }
 
 a, a:focus, a:hover, a:active {
@@ -49,7 +48,12 @@ a, a:focus, a:hover, a:active {
 }
 
 .block-footer {
-  /*height: 40px;*/
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.block-footer a {
+  display: block;
 }
 
 .social-icon {
@@ -86,7 +90,7 @@ a, a:focus, a:hover, a:active {
 }
 
 .header-navigation {
-  /*padding: 15px 15px 0;*/
+  padding: 15px 15px 0;
   margin: 0;
   font: 400 18px "PT Sans Narrow", Arial, sans-serif;
   text-transform: uppercase;
@@ -128,11 +132,11 @@ a, a:focus, a:hover, a:active {
 }
 
 .isay {
-    margin: 50px 0 24px 0px;
-    font-size: 24px;
-    color: #00a280;
-    position: relative;
-    clear: both;
+  margin: 50px 0 24px 0px;
+  font-size: 24px;
+  color: #00a280;
+  position: relative;
+  clear: both;
 }
 
 .soft-white-bg {
@@ -140,9 +144,9 @@ a, a:focus, a:hover, a:active {
 }
 
 .page-footer {
-    padding: 8px 20px 5px;
-    font-size: 13px;
-    background-color: #2F353B;
+  padding: 8px 20px 5px;
+  font-size: 13px;
+  background-color: #2F353B;
 }
 
 .content-row {
@@ -155,6 +159,7 @@ a, a:focus, a:hover, a:active {
 
 .caption-subject {
   word-break: break-word;
+  display: block;
 }
 
 .mt-element-overlay .mt-overlay-4 .mt-info {
@@ -162,7 +167,7 @@ a, a:focus, a:hover, a:active {
 }
 
 .col {
-  flex: 1; /* additionally, equal width */
+  flex: 1;
   padding: 1em;
   border: solid;
 }

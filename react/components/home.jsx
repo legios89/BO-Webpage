@@ -38,15 +38,22 @@ var Home = React.createClass({
   /* **************** */
 
   jobHeightFix: function () {
-    var correctHeight = 0;
+    var correctBlockHeight = 0;
+    var correctTitleHeight = 0;
     $('.job-block').height('auto');
     _.forEach($('.job-block'), function (element) {
       var image = $(element).find('.job-image')[0];
       var extraHeight = image.complete ? 0 : image.width;
       var height = $(element).height() + extraHeight;
-      correctHeight = height > correctHeight ? height : correctHeight;
+      correctBlockHeight = height > correctBlockHeight ? height : correctBlockHeight;
     });
-    $('.job-block').height(correctHeight);
+
+    $('.caption-subject').height('auto');
+    _.forEach($('.caption-subject'), function (element) {
+      var height = $(element).height();
+      correctTitleHeight = height > correctTitleHeight ? height : correctTitleHeight;
+    });
+    $('.caption-subject').height(correctTitleHeight);
   },
 
   /* ************* */
@@ -130,20 +137,18 @@ var Home = React.createClass({
           </div>
           <div className="col-sm-5">
             <div className="col-xs-12">
-              <div className="block-footer col-xs-3 col-xs-offset-1"
-                   style={{background: '#3b5998'}}>
+              <div className="col-xs-1"></div>
+              <div className="block-footer col-xs-3" style={{background: '#3b5998'}}>
                 <a href="">
                   <i className="fa fa-facebook social-icon"></i>
                 </a>
               </div>
-              <div className="block-footer col-xs-3"
-              style={{background: '#4099FF'}}>
+              <div className="block-footer col-xs-3" style={{background: '#4099FF'}}>
                 <a href="">
                   <i className="fa fa-twitter social-icon"></i>
                 </a>
               </div>
-              <div className="block-footer col-xs-3"
-              style={{background: '#0e76A8'}}>
+              <div className="block-footer col-xs-3" style={{background: '#0e76A8'}}>
                 <a href="">
                   <i className="fa fa-linkedin social-icon"></i>
                 </a>
