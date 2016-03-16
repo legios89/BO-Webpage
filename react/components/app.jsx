@@ -4,7 +4,7 @@ var React = require('react');
 var App = React.createClass({
   propTypes: {
     children: React.PropTypes.any,
-    route: React.PropTypes.object
+    route   : React.PropTypes.object
   },
 
   getInitialState: function () {

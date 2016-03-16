@@ -1,5 +1,6 @@
 /* global gettext, $ */
 var React = require('react');
+var _ = require('lodash');
 
 /* Components */
 var Job = require('./parts/job.jsx');
@@ -21,6 +22,31 @@ var Home = React.createClass({
     $.get(this.props.urls.job_list, function (response) {
       self.setState({jobs: response});
     });
+    window.addEventListener('resize', this.jobHeightFix);
+  },
+
+  componentWillUnmount: function () {
+    window.removeEventListener('resize', this.jobHeightFix);
+  },
+
+  componentDidUpdate: function () {
+    this.jobHeightFix();
+  },
+
+  /* **************** */
+  /* HELPER FUNCTIONS */
+  /* **************** */
+
+  jobHeightFix: function () {
+    var correctHeight = 0;
+    $('.job-block').height('auto');
+    _.forEach($('.job-block'), function (element) {
+      var image = $(element).find('.job-image')[0];
+      var extraHeight = image.complete ? 0 : image.width;
+      var height = $(element).height() + extraHeight;
+      correctHeight = height > correctHeight ? height : correctHeight;
+    });
+    $('.job-block').height(correctHeight);
   },
 
   /* ************* */
@@ -95,7 +121,10 @@ var Home = React.createClass({
         <div className="row content-row page-footer">
           <div className="col-sm-7 about-description">
             <div>
-              <span>E-mail: orsolya.birkas@adecco.com</span><br/>
+              <span>E-mail: </span>
+              <a href="mailto:orsolya.birkas@adecco.com" target="_blank">
+                orsolya.birkas@adecco.com
+              </a><br/>
               <span>Telefon: 06308689742</span>
             </div>
           </div>

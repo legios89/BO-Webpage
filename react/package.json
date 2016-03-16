@@ -13,6 +13,7 @@
     "browserify": "13.0.0",
     "watchify": "3.7.0",
     "react-router": "1.0.3",
-    "history": "1.17.0"
+    "history": "1.17.0",
+    "lodash": "4.6.1"
   }
 }

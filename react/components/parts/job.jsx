@@ -9,7 +9,7 @@ var Job = React.createClass({
 
   render: function () {
     return (
-      <div className="col-md-3 col-sm-4 col-xs-6"
+      <div className="col-md-3 col-sm-4 col-xs-6 col job-block"
            style={{background: this.props.color}}>
         <div className="portlet">
           <div className="portlet-title">
@@ -28,12 +28,12 @@ var Job = React.createClass({
               <div className="row">
                 <div className="col-md-12">
                   <div className="mt-overlay-4">
-                    <img src="http://placehold.it/600x600"/>
+                    <img src="http://placehold.it/600x600" className="job-image"/>
                     <div className="mt-overlay">
                       <h2>{this.props.job.title}</h2>
-                      <a className="mt-info btn btn-default" href="#">
+                      <button className="mt-info btn btn-default">
                         {gettext('Részletek')}
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
