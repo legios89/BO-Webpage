@@ -16,9 +16,7 @@ docker build -t birkas_orsi-nginx "docker/nginx"
 
 echo "django-python3"
 echo "--------------------"
-docker build \
-  --build-arg "CACHE_DATE=$(date)" \
-  -t birkas_orsi-django-python3 "docker/django-python3"
+docker build -t birkas_orsi-django-python3 "docker/django-python3"
 
 echo "nodejs"
 echo "--------------------"
