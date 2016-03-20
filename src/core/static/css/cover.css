@@ -171,3 +171,14 @@ a, a:focus, a:hover, a:active {
   padding: 1em;
   border: solid;
 }
+
+.bootbox.modal {
+  color: black;
+  text-align: left;
+  text-shadow: none;
+}
+
+.modal-title{
+  text-align: center;
+  text-shadow: none;
+}

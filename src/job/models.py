@@ -4,6 +4,7 @@ from django.db import models
 from django.conf import settings
 from imagekit.models import ProcessedImageField
 from imagekit.processors import ResizeToFill
+from tinymce import models as tinymce_models
 import datetime
 
 
@@ -27,7 +28,7 @@ class Job(models.Model):
     title = models.CharField(max_length=50)
     created_by = models.ForeignKey(settings.AUTH_USER_MODEL)
     created_at = models.DateTimeField(auto_now_add=True)
-    description = models.TextField()
+    description = tinymce_models.HTMLField()
     image = ProcessedImageField(
         upload_to=job_image_path, format='JPEG', null=True,
         processors=[ResizeToFill(600, 600)], options={'quality': 60})

@@ -1,4 +1,4 @@
-/* global gettext*/
+/* global gettext, bootbox, $ */
 var React = require('react');
 
 var Job = React.createClass({
@@ -7,7 +7,40 @@ var Job = React.createClass({
     color: React.PropTypes.string.isRequired
   },
 
+  onDescriptionClick: function () {
+    var self = this;
+    bootbox.dialog({
+      message: this.props.job.description,
+      title  : this.props.job.title,
+      buttons: {
+        success: {
+          label    : gettext('Download PDF'),
+          className: 'btn-success',
+          callback : function () {
+            $(self.refs.pdfButton)[0].click();
+          }
+        },
+        main: {
+          label    : gettext('Close'),
+          className: 'btn-primary'
+        }
+      }
+    });
+  },
+
   render: function () {
+    var pdfButton;
+    var buttonClass = 'mt-info btn btn-default';
+    var image = this.props.job.image;
+    image = image === null ? 'http://placehold.it/600x600' : image;
+
+    if (this.props.job.pdf !== null) {
+      pdfButton = (
+        <a href={this.props.job.pdf} className={buttonClass} target="_blank" ref="pdfButton">
+          {gettext('PDF')}
+        </a>
+      );
+    }
     return (
       <div className="col-md-3 col-sm-4 col-xs-6 col job-block"
            style={{background: this.props.color}}>
@@ -28,12 +61,13 @@ var Job = React.createClass({
               <div className="row">
                 <div className="col-md-12">
                   <div className="mt-overlay-4">
-                    <img src="http://placehold.it/600x600" className="job-image"/>
+                    <img src={image} className="job-image"/>
                     <div className="mt-overlay">
                       <h2>{this.props.job.title}</h2>
-                      <button className="mt-info btn btn-default">
+                      <button className={buttonClass} onClick={this.onDescriptionClick}>
                         {gettext('Részletek')}
                       </button>
+                      {pdfButton}
                     </div>
                   </div>
                 </div>

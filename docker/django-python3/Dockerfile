@@ -26,4 +26,5 @@ RUN pip3 install \
       django-imagekit==3.3 \
       django-modeltranslation==0.11 \
       django-rosetta==0.7.10 \
-      pillow==3.1.1
+      pillow==3.1.1 \
+      django-tinymce==2.3.0

@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'django_extensions',
     'compressor',
     'rosetta',
+    'tinymce',
     # project apps
     'job',
     'candidate'
@@ -189,3 +190,17 @@ EMAIL_HOST_USER = getvar('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = getvar('EMAIL_HOST_PASSWORD')
 SERVER_EMAIL = getvar('EMAIL_HOST_USER')
 DEFAULT_FROM_EMAIL = getvar('EMAIL_HOST_USER')
+
+BUTTONS = 'bold,italic,underline,separator,bullist,separator,outdent,indent,'
+BUTTONS += 'separator,undo,redo,emotions'
+
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins': "paste,emotions",
+    'theme': "advanced",
+    'theme_advanced_toolbar_location': "top",
+    'theme_advanced_buttons1': BUTTONS,
+    'theme_advanced_buttons2': "",
+    'theme_advanced_buttons3': "",
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 10
+}

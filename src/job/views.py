@@ -15,7 +15,9 @@ class JobListApi(APIView):
                 'id': job.id,
                 'title': job.title,
                 'created_at': job.created_at,
-                'description': job.description
+                'description': job.description,
+                'image': job.image.url if job.image else None,
+                'pdf': job.pdf.url if job.pdf else None
             })
         return Response(data)
 
