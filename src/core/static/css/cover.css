@@ -140,7 +140,7 @@ a, a:focus, a:hover, a:active {
 }
 
 .soft-white-bg {
-  background: rgba(255,255,255,0.95);
+  background: rgba(255,255,255, 1);
 }
 
 .page-footer {
@@ -149,8 +149,8 @@ a, a:focus, a:hover, a:active {
   background-color: #2F353B;
 }
 
-.content-row {
-  margin-top: 60px;
+.content-space {
+  margin-bottom: 50px;
 }
 
 .mt-code {

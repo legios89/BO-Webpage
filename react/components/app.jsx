@@ -23,8 +23,9 @@ var App = React.createClass({
     var target = event.target.dataset.target;
     if (target === 'home') {
       window.scrollTo(0, 0);
+    } else {
+      document.getElementById(target).scrollIntoView({block: 'start', behavior: 'smooth'});
     }
-    document.getElementById(target).scrollIntoView();
   },
 
   render: function () {

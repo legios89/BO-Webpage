@@ -82,7 +82,7 @@ var Home = React.createClass({
   /* *********** */
   render: function () {
     return (
-      <div className="container-fluid" style={{marginTop: '50px'}} id="home">
+      <div className="container-fluid" style={{marginTop: '50px'}}>
         <div className="row welcome-image">
           <div className="pattern col-xs-12 visible-xs"
                style={{height: '200px'}}>
@@ -101,7 +101,8 @@ var Home = React.createClass({
             {this.renderWelcomeText()}
           </div>
         </div>
-         <div className="row content-row" id="about_me">
+        <div className="content-space" id="about_me"></div>
+         <div className="row">
           <div className="col-sm-6 no-padding">
             <img src="http://placehold.it/700x400" style={{width: '100%'}}>
             </img>
@@ -122,10 +123,11 @@ var Home = React.createClass({
             </h5>
           </div>
         </div>
-        <div className="row content-row" id="jobs">
+        <div className="content-space" id="jobs"></div>
+        <div className="row content-space">
           {this.renderJobs()}
         </div>
-        <div className="row content-row page-footer">
+        <div className="row page-footer">
           <div className="col-sm-7 about-description">
             <div>
               <span>E-mail: </span>
