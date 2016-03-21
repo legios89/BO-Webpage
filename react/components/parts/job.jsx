@@ -28,19 +28,40 @@ var Job = React.createClass({
     });
   },
 
-  render: function () {
+  renderButtonBlock: function (extraDivClass, extraStyle) {
     var pdfButton;
-    var buttonClass = 'mt-info btn btn-default';
+    var buttonClass = 'mt-info btn ';
+    if (this.props.job.pdf !== null) {
+      pdfButton = (
+        <div className="btn-group" role="group">
+          <a href={this.props.job.pdf}
+             className={buttonClass + 'btn-success'}
+             target="_blank"
+             ref="pdfButton"
+             style={extraStyle}>
+            {gettext('PDF')}
+          </a>
+        </div>
+      );
+    }
+    return(
+      <div className={'btn-group btn-group-justified ' + extraDivClass} role="group">
+        <div className="btn-group" role="group">
+          <button className={buttonClass + 'btn-primary'}
+                  onClick={this.onDescriptionClick}
+                  style={extraStyle}>
+            {gettext('Részletek')}
+          </button>
+        </div>
+        {pdfButton}
+      </div>
+    );
+  },
+
+  render: function () {
     var image = this.props.job.image;
     image = image === null ? 'http://placehold.it/600x600' : image;
 
-    if (this.props.job.pdf !== null) {
-      pdfButton = (
-        <a href={this.props.job.pdf} className={buttonClass} target="_blank" ref="pdfButton">
-          {gettext('PDF')}
-        </a>
-      );
-    }
     return (
       <div className="col-md-3 col-sm-4 col-xs-6 col job-block"
            style={{background: this.props.color}}>
@@ -64,12 +85,10 @@ var Job = React.createClass({
                     <img src={image} className="job-image"/>
                     <div className="mt-overlay">
                       <h2>{this.props.job.title}</h2>
-                      <button className={buttonClass} onClick={this.onDescriptionClick}>
-                        {gettext('Részletek')}
-                      </button>
-                      {pdfButton}
+                      {this.renderButtonBlock('hidden-xs')}
                     </div>
                   </div>
+                  {this.renderButtonBlock('visible-xs', {fontSize: '14px'})}
                 </div>
               </div>
             </div>
