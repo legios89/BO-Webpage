@@ -61,7 +61,7 @@ var Home = React.createClass({
   /* ************* */
   renderWelcomeText: function () {
     return (
-      <h1 style={{color: '#2C3E50', marginTop: '70px'}}>
+      <h1 className="welcome-text">
         {gettext('Toborzási és Kiválasztási Tanácsadó')}
       </h1>
     );
@@ -85,31 +85,31 @@ var Home = React.createClass({
       <div className="container-fluid" style={{marginTop: '50px'}}>
         <div className="row welcome-image">
           <div className="pattern col-xs-12 visible-xs"
-               style={{height: '200px'}}>
-            {this.renderWelcomeText()}
-          </div>
-          <div className="pattern col-sm-12 visible-sm"
                style={{height: '250px'}}>
             {this.renderWelcomeText()}
           </div>
-          <div className="pattern col-md-12 visible-md"
+          <div className="pattern col-sm-12 visible-sm"
                style={{height: '300px'}}>
             {this.renderWelcomeText()}
           </div>
-          <div className="pattern col-lg-12 visible-lg"
+          <div className="pattern col-md-12 visible-md"
                style={{height: '400px'}}>
+            {this.renderWelcomeText()}
+          </div>
+          <div className="pattern col-lg-12 visible-lg"
+               style={{height: '450px'}}>
             {this.renderWelcomeText()}
           </div>
         </div>
         <div className="content-space" id="about_me"></div>
          <div className="row">
           <div className="col-sm-6 no-padding">
-            <img src="http://placehold.it/700x400" style={{width: '100%'}}>
+            <img src="/static/img/profile.jpg" style={{width: '100%'}}>
             </img>
           </div>
           <div className="col-sm-6 about-description"
                style={{color: '#2C3E50'}}>
-            <h4>
+            <h4 className="about-me">
               <b>{gettext('Üdvözlöm!')}</b><br/>
               <span>{gettext('Birkás Orsolya vagyok.')}</span><br/>
               <span>{gettext('Toborzási és Kiválasztási Tanácsadó.')}</span><br/>

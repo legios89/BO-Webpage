@@ -8,7 +8,7 @@ body {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
-  background-color: #f2ebe6;
+  background: #f2ebe6;
 }
 
 @font-face {
@@ -65,11 +65,16 @@ a, a:focus, a:hover, a:active {
  .welcome-image {
   background-size: cover;
   display: block;
-  /*background-image: url(/static/img/bg.jpg);*/
-  height: auto;
-  background-attachment: fixed;
+  background-image: url(/static/img/bg3.jpg);
   z-index: 1;
+  background-position: 0% 75%;
  }
+
+  .welcome-text {
+    color: white;
+    margin: 70px 0px;
+    text-shadow: -2px -2px 4px #000;
+  }
 
  .pattern {
   width: 100%;
@@ -132,11 +137,13 @@ a, a:focus, a:hover, a:active {
 }
 
 .isay {
-  margin: 50px 0 24px 0px;
+  margin: 41px 6px 23px 41px;
   font-size: 24px;
   color: #00a280;
   position: relative;
   clear: both;
+  text-align: left;
+  font: 600 20px "PT Sans Narrow", Arial, sans-serif;
 }
 
 .soft-white-bg {
@@ -181,4 +188,11 @@ a, a:focus, a:hover, a:active {
 .modal-title{
   text-align: center;
   text-shadow: none;
+}
+
+.about-me{
+  text-align: left;
+  margin-left: 65px;
+  margin-top: 40px;
+  font: 400 19px "PT Sans Narrow", Arial, sans-serif;
 }
