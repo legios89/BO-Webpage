@@ -1,5 +1,7 @@
 /* global gettext, bootbox, $ */
 var React = require('react');
+// var ReactDOM = require('react-dom');
+var ReactDOMServer = require('react-dom/server');
 
 var Job = React.createClass({
   propTypes: {
@@ -9,22 +11,39 @@ var Job = React.createClass({
 
   onDescriptionClick: function () {
     var self = this;
-    bootbox.dialog({
-      message: this.props.job.description,
-      title  : this.props.job.title,
-      buttons: {
-        success: {
-          label    : gettext('Download PDF'),
-          className: 'btn-success',
-          callback : function () {
-            $(self.refs.pdfButton)[0].click();
-          }
-        },
-        main: {
-          label    : gettext('Close'),
-          className: 'btn-primary'
-        }
+    var buttons = {
+      main: {
+        label    : gettext('Close'),
+        className: 'btn-danger'
       }
+    };
+
+    if (this.props.job.pdf !== null) {
+      buttons.success = {
+        label    : gettext('Download PDF'),
+        className: 'btn-success',
+        callback : function () {
+          $(self.refs.pdfButton)[0].click();
+        }
+      };
+    }
+
+    bootbox.dialog({
+      message : this.props.job.description,
+      title   : this.props.job.title,
+      backdrop: true,
+      buttons : buttons
+    });
+
+    $($('.bootbox-body')[0]).before(ReactDOMServer.renderToString(
+      <img src={this.props.job.image} style={{width: '100%', marginBottom: '15px'}}/>
+    ));
+
+    $('.bootbox').click(function (ev) {
+      if(ev.target !== this) {
+        return;
+      }
+      $('.bootbox').modal('hide');
     });
   },
 

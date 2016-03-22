@@ -3,7 +3,7 @@
 from django.db import models
 from django.conf import settings
 from imagekit.models import ProcessedImageField
-from imagekit.processors import ResizeToFill
+from imagekit.processors import ResizeToFit
 from tinymce import models as tinymce_models
 import datetime
 
@@ -31,8 +31,8 @@ class Job(models.Model):
     description = tinymce_models.HTMLField()
     image = ProcessedImageField(
         upload_to=job_image_path, format='JPEG', null=True,
-        processors=[ResizeToFill(600, 600)], options={'quality': 60})
-    pdf = models.FileField(upload_to=job_pdf_path, null=True)
+        processors=[ResizeToFit(600)], options={'quality': 60})
+    pdf = models.FileField(upload_to=job_pdf_path, null=True, blank=True)
 
     def __str__(self):
         return('#%s %s' % (self.id, self.title))

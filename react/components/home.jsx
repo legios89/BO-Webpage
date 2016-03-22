@@ -47,6 +47,7 @@ var Home = React.createClass({
       var height = $(element).height() + extraHeight;
       correctBlockHeight = height > correctBlockHeight ? height : correctBlockHeight;
     });
+    $('.job-block').height(correctBlockHeight);
 
     $('.caption-subject').height('auto');
     _.forEach($('.caption-subject'), function (element) {

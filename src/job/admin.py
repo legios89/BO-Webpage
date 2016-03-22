@@ -12,7 +12,7 @@ class JobCategoryInline(admin.TabularInline):
 class JobAdminForm(forms.ModelForm):
     class Meta:
         model = Job
-        fields = '__all__'
+        fields = ('title', 'description', 'image', 'pdf')
         widgets = {
             'description': TinyMCE(attrs={'cols': 80, 'rows': 30}),
         }
@@ -24,6 +24,12 @@ class JobAdmin(admin.ModelAdmin):
     list_display_links = list_display
     search_fields = ['title']
     inlines = [JobCategoryInline, ]
+    readonly_fields = ('created_by', 'created_at')
+
+    def save_model(self, request, obj, form, change):
+        if obj.id is None:
+            obj.created_by = request.user
+        obj.save()
 
 admin.site.register(Job, JobAdmin)
 admin.site.register(Category)
