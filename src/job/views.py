@@ -10,14 +10,22 @@ from .models import Job, Category
 class JobListApi(APIView):
     def get(self, request, format=None):
         data = []
-        for job in Job.objects.all():
+        for job in Job.objects.all().prefetch_related('categories__category'):
+            categories = []
+            for jobcategory in job.categories.all():
+                categories.append({
+                    'id': jobcategory.category.id,
+                    'name': jobcategory.category.name
+                })
+
             data.append({
                 'id': job.id,
                 'title': job.title,
                 'created_at': job.created_at,
                 'description': job.description,
                 'image': job.image.url if job.image else None,
-                'pdf': job.pdf.url if job.pdf else None
+                'pdf': job.pdf.url if job.pdf else None,
+                'categories': categories
             })
         return Response(data)
 

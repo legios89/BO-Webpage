@@ -47,6 +47,12 @@ var Job = React.createClass({
     });
   },
 
+  renderCategories: function () {
+    return this.props.job.categories.map(function (category, key) {
+      return (<pre className="mt-code" key={key}>{category.name}</pre>);
+    });
+  },
+
   renderButtonBlock: function (extraDivClass, extraStyle) {
     var pdfButton;
     var buttonClass = 'mt-info btn ';
@@ -90,9 +96,8 @@ var Job = React.createClass({
               <span className="caption-subject bold uppercase">
                 {this.props.job.title}
               </span>
-              <div>
-                <pre className="mt-code">php</pre>
-                <pre className="mt-code">nodejs</pre>
+              <div style={{minHeight: '21px'}}>
+                {this.renderCategories()}
               </div>
             </div>
           </div>

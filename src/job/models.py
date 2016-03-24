@@ -46,8 +46,8 @@ class Category(models.Model):
 
 
 class JobCategory(models.Model):
-    job = models.ForeignKey(Job)
-    category = models.ForeignKey(Category)
+    job = models.ForeignKey(Job, related_name="categories")
+    category = models.ForeignKey(Category, related_name="jobs")
 
     def __str__(self):
         return('#%s %s %s' % (self.id, self.job.title, self.category.name))

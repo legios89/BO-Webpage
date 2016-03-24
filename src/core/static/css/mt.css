@@ -47,8 +47,6 @@
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   margin: 50px 0 0;
-  border: 1px solid #f2ebe6;
-  border-radius: 0px;
 }
 
 .mt-element-overlay .mt-overlay-4:hover .mt-overlay {
