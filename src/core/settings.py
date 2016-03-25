@@ -45,8 +45,7 @@ INSTALLED_APPS = (
     'rosetta',
     'tinymce',
     # project apps
-    'job',
-    'candidate'
+    'job'
 )
 
 MIDDLEWARE_CLASSES = (
