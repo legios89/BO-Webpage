@@ -10,7 +10,8 @@ from .models import Job, Category
 class JobListApi(APIView):
     def get(self, request, format=None):
         data = []
-        for job in Job.objects.all().prefetch_related('categories__category'):
+        pf = ('categories__category', )
+        for job in Job.objects.filter(is_active=True).prefetch_related(*pf):
             categories = []
             for jobcategory in job.categories.all():
                 categories.append({

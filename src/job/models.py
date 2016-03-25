@@ -28,6 +28,7 @@ class Job(models.Model):
     title = models.CharField(max_length=50)
     created_by = models.ForeignKey(settings.AUTH_USER_MODEL)
     created_at = models.DateTimeField(auto_now_add=True)
+    is_active = models.BooleanField(default=True)
     description = tinymce_models.HTMLField()
     image = ProcessedImageField(
         upload_to=job_image_path, format='JPEG', null=True,

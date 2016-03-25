@@ -12,10 +12,8 @@ class JobCategoryInline(admin.TabularInline):
 class JobAdminForm(forms.ModelForm):
     class Meta:
         model = Job
-        fields = ('title', 'description', 'image', 'pdf')
-        widgets = {
-            'description': TinyMCE(attrs={'cols': 80, 'rows': 30}),
-        }
+        fields = ('title', 'description', 'is_active', 'image', 'pdf')
+        widgets = {'description': TinyMCE(attrs={'cols': 80, 'rows': 30}), }
 
 
 class JobAdmin(admin.ModelAdmin):

@@ -17,6 +17,8 @@ var Job = React.createClass({
         className: 'btn-danger'
       }
     };
+    var link = 'mailto:orsolya.birkas@adecco.com?subject=' + gettext('Jelentkezés') + ': ';
+    link += this.props.job.title;
 
     if (this.props.job.pdf !== null) {
       buttons.success = {
@@ -35,9 +37,19 @@ var Job = React.createClass({
       buttons : buttons
     });
 
-    $($('.bootbox-body')[0]).before(ReactDOMServer.renderToString(
-      <img src={this.props.job.image.url} style={{width: '100%', marginBottom: '15px'}}/>
-    ));
+    $($('.bootbox-body')[0]).before(
+      ReactDOMServer.renderToString(
+        <img src={this.props.job.image.url} style={{width: '100%', marginBottom: '15px'}}/>
+      )
+    );
+
+    $('.bootbox .modal-footer').append(
+      ReactDOMServer.renderToString(
+        <a href={link} target="_blank" className="btn btn-info">
+          {gettext('Jelentkezem')}
+        </a>
+      )
+    );
 
     $('.bootbox').click(function (ev) {
       if(ev.target !== this) {
