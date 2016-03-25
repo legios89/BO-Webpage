@@ -40,21 +40,22 @@ var Home = React.createClass({
   jobHeightFix: function () {
     var correctBlockHeight = 0;
     var correctTitleHeight = 0;
-    $('.job-block').height('auto');
-    _.forEach($('.job-block'), function (element) {
-      var image = $(element).find('.job-image')[0];
-      var extraHeight = image.complete ? 0 : image.width;
-      var height = $(element).height() + extraHeight;
-      correctBlockHeight = height > correctBlockHeight ? height : correctBlockHeight;
-    });
-    $('.job-block').height(correctBlockHeight);
-
     $('.caption-subject').height('auto');
     _.forEach($('.caption-subject'), function (element) {
       var height = $(element).height();
       correctTitleHeight = height > correctTitleHeight ? height : correctTitleHeight;
     });
     $('.caption-subject').height(correctTitleHeight);
+
+    _.forEach($('.job-image'), function (element) {
+      var ratio = element.width / element.attributes.width.value;
+      var height = element.attributes.height.value * ratio;
+      correctBlockHeight = height > correctBlockHeight ? height : correctBlockHeight;
+    });
+    $('.job-image').height(correctBlockHeight);
+
+    console.log(correctBlockHeight);
+    console.log(correctTitleHeight);
   },
 
   /* ************* */
@@ -131,11 +132,11 @@ var Home = React.createClass({
         <div className="row page-footer">
           <div className="col-sm-7 about-description">
             <div>
-              <span>E-mail: </span>
+              <span>{gettext('E-mail') + ': '}</span>
               <a href="mailto:orsolya.birkas@adecco.com" target="_blank">
                 orsolya.birkas@adecco.com
               </a><br/>
-              <span>Telefon: 06308689742</span>
+              <span>{gettext('Telefon') + ': 06308689742'}</span>
             </div>
           </div>
           <div className="col-sm-5">

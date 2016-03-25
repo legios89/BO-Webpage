@@ -36,7 +36,7 @@ var Job = React.createClass({
     });
 
     $($('.bootbox-body')[0]).before(ReactDOMServer.renderToString(
-      <img src={this.props.job.image} style={{width: '100%', marginBottom: '15px'}}/>
+      <img src={this.props.job.image.url} style={{width: '100%', marginBottom: '15px'}}/>
     ));
 
     $('.bootbox').click(function (ev) {
@@ -84,9 +84,6 @@ var Job = React.createClass({
   },
 
   render: function () {
-    var image = this.props.job.image;
-    image = image === null ? 'http://placehold.it/600x600' : image;
-
     return (
       <div className="col-md-3 col-sm-4 col-xs-6 col job-block"
            style={{background: this.props.color}}>
@@ -106,13 +103,16 @@ var Job = React.createClass({
               <div className="row">
                 <div className="col-md-12">
                   <div className="mt-overlay-4">
-                    <img src={image} className="job-image"/>
+                    <img src={this.props.job.image.url}
+                         className="job-image"
+                         height={this.props.job.image.height}
+                         width={this.props.job.image.width}/>
                     <div className="mt-overlay">
                       <h2>{this.props.job.title}</h2>
                       {this.renderButtonBlock('hidden-xs')}
                     </div>
                   </div>
-                  {this.renderButtonBlock('visible-xs', {fontSize: '14px'})}
+                  {this.renderButtonBlock('visible-xs', {fontSize: '14px', padding: '3px 6px'})}
                 </div>
               </div>
             </div>

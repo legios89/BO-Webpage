@@ -46,7 +46,6 @@
   filter: alpha(opacity=0);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  margin: 50px 0 0;
 }
 
 .mt-element-overlay .mt-overlay-4:hover .mt-overlay {
@@ -134,7 +133,7 @@
 }
 
 .portlet-title, .portlet-body {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   margin-top: 5px;
 }
 

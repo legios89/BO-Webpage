@@ -172,7 +172,7 @@ a, a:focus, a:hover, a:active {
 .col {
   flex: 1;
   padding: 1em;
-  border: solid;
+  border: 1px solid #f2ebe6
 }
 
 .bootbox.modal {
@@ -194,5 +194,10 @@ a, a:focus, a:hover, a:active {
 }
 
 .modal-content {
-    word-break: break-all;
+  word-break: break-all;
+  border-radius: 0px;
+}
+
+.btn {
+  border-radius: 0px;
 }

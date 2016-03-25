@@ -23,7 +23,11 @@ class JobListApi(APIView):
                 'title': job.title,
                 'created_at': job.created_at,
                 'description': job.description,
-                'image': job.image.url if job.image else None,
+                'image': {
+                    'url': job.image.url,
+                    'height': job.image.height,
+                    'width': job.image.width
+                },
                 'pdf': job.pdf.url if job.pdf else None,
                 'categories': categories
             })
