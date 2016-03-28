@@ -18,8 +18,9 @@ class JobAdminForm(forms.ModelForm):
 
 class JobAdmin(admin.ModelAdmin):
     form = JobAdminForm
-    list_display = ('id', 'title', 'created_at')
+    list_display = ('id', 'title', 'created_at', 'is_active')
     list_display_links = list_display
+    list_filter = ('is_active', )
     search_fields = ['title']
     inlines = [JobCategoryInline, ]
     readonly_fields = ('created_by', 'created_at')

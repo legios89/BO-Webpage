@@ -159,7 +159,9 @@ var Home = React.createClass({
               </div>
             </div>
             <div className="col-xs-12">
-              <span>{gettext('Webdesign & Sitebuild')} E&Bro</span>
+              <span>{gettext('Webdesign & Sitebuild')}
+                <a href="https://github.com/legios89/BO-Webpage"> E&Bro </a>
+              </span>
             </div>
           </div>
         </div>

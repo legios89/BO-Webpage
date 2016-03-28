@@ -17,7 +17,7 @@ RUN pip3 install \
       psycopg2==2.6.1 \
       django-debug-toolbar==1.4 \
       djangorestframework==3.3.3 \
-      markdown==2.6.5 \
+      markdown==2.6.6 \
       django-filter==0.13.0 \
       django-crispy-forms==1.6.0 \
       django-cleanup==0.4.2 \
