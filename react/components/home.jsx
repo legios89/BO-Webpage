@@ -53,9 +53,6 @@ var Home = React.createClass({
       correctBlockHeight = height > correctBlockHeight ? height : correctBlockHeight;
     });
     $('.job-image').height(correctBlockHeight);
-
-    console.log(correctBlockHeight);
-    console.log(correctTitleHeight);
   },
 
   /* ************* */
