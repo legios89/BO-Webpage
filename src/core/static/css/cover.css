@@ -56,19 +56,20 @@ a, a:focus, a:hover, a:active {
   color: white !important
 }
 
- .welcome-image {
+.welcome-image {
   background-size: cover;
   display: block;
   background-image: url(/static/img/bg3.jpg);
   z-index: 1;
   background-position: 0% 75%;
- }
+}
 
-  .welcome-text {
-    color: white;
-    margin: 70px 0px;
-    text-shadow: -2px -2px 4px #000;
-  }
+.welcome-text {
+  color: white;
+  margin: 70px 0px;
+  text-shadow: -2px -2px 4px #000;
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+}
 
  .pattern {
   width: 100%;
@@ -167,6 +168,9 @@ a, a:focus, a:hover, a:active {
   margin-top: 0px;
   border: 1px solid #f2ebe6 !important;
   border-radius: 0px;
+  font: 400 15px "PT Sans Narrow", Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .col {
@@ -200,4 +204,9 @@ a, a:focus, a:hover, a:active {
 
 .btn {
   border-radius: 0px;
+}
+
+.small-padding {
+  padding-left: 5px;
+  padding-right: 5px;
 }

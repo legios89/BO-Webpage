@@ -105,11 +105,11 @@ var Home = React.createClass({
         </div>
         <div className="content-space" id="about_me"></div>
          <div className="row">
-          <div className="col-sm-6 no-padding">
+          <div className="col-md-6 no-padding">
             <img src="/static/img/profile.jpg" style={{width: '100%'}}>
             </img>
           </div>
-          <div className="col-sm-6 about-description"
+          <div className="col-md-6 about-description"
                style={{color: '#2C3E50'}}>
             <h4 className="about-me">
               <b>{gettext('Üdvözlöm!')}</b><br/>

@@ -13,8 +13,8 @@ var Job = React.createClass({
     var self = this;
     var buttons = {
       main: {
-        label    : gettext('Close'),
-        className: 'btn-danger'
+        label    : gettext('Bezár'),
+        className: 'btn-danger mt-info'
       }
     };
     var link = 'mailto:orsolya.birkas@adecco.com?subject=' + gettext('Jelentkezés') + ': ';
@@ -22,8 +22,8 @@ var Job = React.createClass({
 
     if (this.props.job.pdf !== null) {
       buttons.success = {
-        label    : gettext('Download PDF'),
-        className: 'btn-success',
+        label    : gettext('Letöltés'),
+        className: 'btn-success mt-info',
         callback : function () {
           $(self.refs.pdfButton)[0].click();
         }
@@ -45,8 +45,8 @@ var Job = React.createClass({
 
     $('.bootbox .modal-footer').append(
       ReactDOMServer.renderToString(
-        <a href={link} target="_blank" className="btn btn-info">
-          {gettext('Jelentkezem')}
+        <a href={link} target="_blank" className="btn btn-info mt-info">
+          {gettext('E-mail')}
         </a>
       )
     );
@@ -65,28 +65,28 @@ var Job = React.createClass({
     });
   },
 
-  renderButtonBlock: function (extraDivClass, extraStyle) {
+  renderButtonBlock: function () {
     var pdfButton;
     var buttonClass = 'mt-info btn ';
     if (this.props.job.pdf !== null) {
       pdfButton = (
-        <div className="btn-group" role="group">
+        <div className="btn-group" role="group" style={{verticalAlign: 'initial'}}>
           <a href={this.props.job.pdf}
              className={buttonClass + 'btn-success'}
              target="_blank"
              ref="pdfButton"
-             style={extraStyle}>
-            {gettext('PDF')}
+             style={{}}>
+            {gettext('Letöltés')}
           </a>
         </div>
       );
     }
     return(
-      <div className={'btn-group btn-group-justified ' + extraDivClass} role="group">
-        <div className="btn-group" role="group">
+      <div className="btn-group btn-group-justified" role="group" style={{marginTop: '-28px'}}>
+        <div className="btn-group" role="group" style={{verticalAlign: 'initial'}}>
           <button className={buttonClass + 'btn-primary'}
                   onClick={this.onDescriptionClick}
-                  style={extraStyle}>
+                  style={{}}>
             {gettext('Részletek')}
           </button>
         </div>
@@ -97,7 +97,7 @@ var Job = React.createClass({
 
   render: function () {
     return (
-      <div className="col-md-3 col-sm-4 col-xs-6 col job-block"
+      <div className="col-md-3 col-sm-4 col job-block"
            style={{background: this.props.color}}>
         <div className="portlet">
           <div className="portlet-title">
@@ -113,18 +113,14 @@ var Job = React.createClass({
           <div className="portlet-body">
             <div className="mt-element-overlay">
               <div className="row">
-                <div className="col-md-12">
+                <div className="col-md-12 small-padding">
                   <div className="mt-overlay-4">
                     <img src={this.props.job.image.url}
                          className="job-image"
                          height={this.props.job.image.height}
                          width={this.props.job.image.width}/>
-                    <div className="mt-overlay">
-                      <h2>{this.props.job.title}</h2>
-                      {this.renderButtonBlock('hidden-xs')}
-                    </div>
                   </div>
-                  {this.renderButtonBlock('visible-xs', {fontSize: '14px', padding: '3px 6px'})}
+                  {this.renderButtonBlock()}
                 </div>
               </div>
             </div>
