@@ -106,7 +106,7 @@ var Home = React.createClass({
         <div className="content-space" id="about_me"></div>
          <div className="row">
           <div className="col-md-6 no-padding">
-            <img src="/static/img/profile.jpg" style={{width: '100%'}}>
+            <img src="/static/img/profile.jpg" style={{width: '100%'}} alt="profile">
             </img>
           </div>
           <div className="col-md-6 about-description"

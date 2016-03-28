@@ -39,7 +39,9 @@ var Job = React.createClass({
 
     $($('.bootbox-body')[0]).before(
       ReactDOMServer.renderToString(
-        <img src={this.props.job.image.url} style={{width: '100%', marginBottom: '15px'}}/>
+        <img src={this.props.job.image.url}
+             style={{width: '100%', marginBottom: '15px'}}
+             alt={this.props.job.title}/>
       )
     );
 
@@ -116,6 +118,7 @@ var Job = React.createClass({
                 <div className="col-md-12 small-padding">
                   <div className="mt-overlay-4">
                     <img src={this.props.job.image.url}
+                         alt={this.props.job.title}
                          className="job-image"
                          height={this.props.job.image.height}
                          width={this.props.job.image.width}/>
