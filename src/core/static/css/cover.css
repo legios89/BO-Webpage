@@ -42,27 +42,21 @@ a, a:focus, a:hover, a:active {
 
 .welcome-image {
   background-size: cover;
-  display: block;
   background-image: url(/static/img/bg3.jpg);
-  z-index: 1;
-  background-position: 0% 75%;
-  margin-top: 50px;
+  background-attachment: fixed;
+  background-position: 0% -200px;
 }
 
 .welcome-text {
   color: white;
-  margin: 70px 0px;
+  margin: 100px 0px;
   text-shadow: -2px -2px 4px #000;
   font-family: "PT Sans Narrow", Arial, sans-serif;
 }
 
 .pattern {
-  width: 100%;
-  display: block;
   background-image: url(/static/img/pattern.png);
-  height: 100%;
   background-attachment: fixed;
-  position: relative;
   z-index: 1;
 }
 
