@@ -30,23 +30,7 @@ a, a:focus, a:hover, a:active {
   padding-right: 0px;
 }
 
-
 .block {
-  display: block;
-  height: 600px;
-}
-
-.block-job {
-  display: block;
-  height: 300px;
-}
-
-.block-footer {
-  padding-right: 0px;
-  padding-left: 0px;
-}
-
-.block-footer a {
   display: block;
 }
 
@@ -62,6 +46,7 @@ a, a:focus, a:hover, a:active {
   background-image: url(/static/img/bg3.jpg);
   z-index: 1;
   background-position: 0% 75%;
+  margin-top: 50px;
 }
 
 .welcome-text {
@@ -71,7 +56,7 @@ a, a:focus, a:hover, a:active {
   font-family: "PT Sans Narrow", Arial, sans-serif;
 }
 
- .pattern {
+.pattern {
   width: 100%;
   display: block;
   background-image: url(/static/img/pattern.png);
@@ -127,14 +112,16 @@ a, a:focus, a:hover, a:active {
   margin-left: -15px !important;
 }
 
-.about-description {
-  font: normal 18px "Montserrat","Open sans",Arial,sans-serif;
+.contact-description {
+  font: 200 18px "PT Sans Narrow", Arial, sans-serif;
+  margin-bottom: 5px;
+  line-height: 32px
 }
 
 .isay {
-  margin: 41px 6px 23px 41px;
+  margin: 30px 10px 0px 30px;;
   font-size: 24px;
-  color: #00a280;
+  color: #E6400C;
   position: relative;
   clear: both;
   text-align: left;
@@ -146,9 +133,9 @@ a, a:focus, a:hover, a:active {
 }
 
 .page-footer {
-  padding: 8px 20px 5px;
-  font-size: 13px;
-  background-color: #2F353B;
+  padding: 10px 5px 5px;
+  background-color: #3A4958;
+  font: 200 15px "PT Sans Narrow", Arial, sans-serif;
 }
 
 .content-space {
@@ -185,16 +172,17 @@ a, a:focus, a:hover, a:active {
   text-shadow: none;
 }
 
-.modal-title{
+.modal-title {
   text-align: center;
   text-shadow: none;
 }
 
-.about-me{
+.about-me {
   text-align: left;
   margin-left: 65px;
   margin-top: 40px;
   font: 400 19px "PT Sans Narrow", Arial, sans-serif;
+  color: #2C3E50;
 }
 
 .modal-content {
@@ -209,4 +197,25 @@ a, a:focus, a:hover, a:active {
 .small-padding {
   padding-left: 5px;
   padding-right: 5px;
+}
+
+.fb-color {
+  background: #3b5998;
+}
+
+.twitter-color {
+  background: #4099FF;
+}
+
+.linkedin-color {
+  background: #0e76A8;
+}
+
+.e-bro-block {
+  background: #293133;
+  line-height: 34px;
+}
+
+.max-width {
+  width: 100%;
 }

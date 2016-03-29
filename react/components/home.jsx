@@ -59,20 +59,14 @@ var Home = React.createClass({
   /* RENDER BLOCKS */
   /* ************* */
   renderWelcomeText: function () {
-    return (
-      <h1 className="welcome-text">
-        {gettext('Toborzási és Kiválasztási Tanácsadó')}
-      </h1>
-    );
+    return (<h1 className="welcome-text">{gettext('Toborzási és Kiválasztási Tanácsadó')}</h1>);
   },
 
   renderJobs: function () {
-    var colors = ['#2F353B', '#ACB5C3', '#67809F', '#E1E5EC', '#4C87B9',
-                  '#E5E5E5', '#4B77BE', '#525E64'];
+    var colors = ['#2F353B', '#ACB5C3', '#67809F', '#E1E5EC', '#4C87B9', '#E5E5E5', '#4B77BE',
+                  '#525E64'];
     return this.state.jobs.map(function (job, key) {
-      return (
-        <Job job={job} color={colors[key % colors.length]} key={job.id}/>
-      );
+      return (<Job job={job} color={colors[key % colors.length]} key={job.id}/>);
     });
   },
 
@@ -81,37 +75,31 @@ var Home = React.createClass({
   /* *********** */
   render: function () {
     return (
-      <div className="container-fluid" style={{marginTop: '50px'}}>
+      <div className="container-fluid">
         <div className="row welcome-image">
-          <div className="pattern col-xs-12 visible-xs"
-               style={{height: '250px'}}>
+          <div className="pattern col-xs-12 visible-xs" style={{height: '250px'}}>
             {this.renderWelcomeText()}
           </div>
-          <div className="pattern col-sm-12 visible-sm"
-               style={{height: '300px'}}>
+          <div className="pattern col-sm-12 visible-sm" style={{height: '300px'}}>
             {this.renderWelcomeText()}
           </div>
-          <div className="pattern col-md-12 visible-md"
-               style={{height: '400px'}}>
+          <div className="pattern col-md-12 visible-md" style={{height: '400px'}}>
             {this.renderWelcomeText()}
           </div>
-          <div className="pattern col-lg-12 visible-lg"
-               style={{height: '450px'}}>
+          <div className="pattern col-lg-12 visible-lg" style={{height: '450px'}}>
             {this.renderWelcomeText()}
           </div>
         </div>
         <div className="content-space" id="about_me"></div>
          <div className="row">
           <div className="col-md-6 no-padding">
-            <img src="/static/img/profile.jpg" style={{width: '100%'}} alt="profile">
-            </img>
+            <img src="/static/img/profile.jpg" className="max-width" alt="profile"/>
           </div>
-          <div className="col-md-6 about-description"
-               style={{color: '#2C3E50'}}>
+          <div className="col-md-6">
             <h4 className="about-me">
-              <b>{gettext('Üdvözlöm!')}</b><br/>
-              <span>{gettext('Birkás Orsolya vagyok.')}</span><br/>
-              <span>{gettext('Toborzási és Kiválasztási Tanácsadó.')}</span><br/>
+              <p><b>{gettext('Üdvözlöm!')}</b></p>
+              <p>{gettext('Birkás Orsolya vagyok.')}</p>
+              <p>{gettext('Toborzási és Kiválasztási Tanácsadó.')}</p>
             </h4>
             <h5 className="isay">
               {gettext(
@@ -127,7 +115,7 @@ var Home = React.createClass({
           {this.renderJobs()}
         </div>
         <div className="row page-footer">
-          <div className="col-sm-7 about-description">
+          <div className="col-sm-7 contact-description">
             <div>
               <span>{gettext('E-mail') + ': '}</span>
               <a href="mailto:orsolya.birkas@adecco.com" target="_blank">
@@ -136,29 +124,32 @@ var Home = React.createClass({
               <span>{gettext('Telefon') + ': 06308689742'}</span>
             </div>
           </div>
-          <div className="col-sm-5">
-            <div className="col-xs-12">
+          <div className="col-sm-5 no-padding">
+            <div className="col-xs-12 no-padding">
               <div className="col-xs-1"></div>
-              <div className="block-footer col-xs-3" style={{background: '#3b5998'}}>
-                <a href="https://www.facebook.com/orsolya.birkas">
+              <div className="no-padding col-xs-3 fb-color">
+                <a href="https://www.facebook.com/orsolya.birkas" className="block">
                   <i className="fa fa-facebook social-icon"></i>
                 </a>
               </div>
-              <div className="block-footer col-xs-3" style={{background: '#4099FF'}}>
-                <a href="https://twitter.com/BirkasOrsolya">
+              <div className="no-padding col-xs-3 twitter-color">
+                <a href="https://twitter.com/BirkasOrsolya" className="block">
                   <i className="fa fa-twitter social-icon"></i>
                 </a>
               </div>
-              <div className="block-footer col-xs-3" style={{background: '#0e76A8'}}>
-                <a href="https://hu.linkedin.com/in/orsolya-birkás-a552a697">
+              <div className="no-padding col-xs-3 linkedin-color">
+                <a href="https://hu.linkedin.com/in/orsolya-birkás-a552a697" className="block">
                   <i className="fa fa-linkedin social-icon"></i>
                 </a>
               </div>
             </div>
-            <div className="col-xs-12">
-              <span>{gettext('Webdesign & Sitebuild')}
-                <a href="https://github.com/legios89/BO-Webpage"> E&Bro </a>
-              </span>
+            <div className="col-xs-12 no-padding">
+              <div className="col-xs-1"></div>
+              <div className="no-padding col-xs-9 e-bro-block">
+                  <a href="https://github.com/legios89/BO-Webpage" className="block">
+                    {gettext('Webdesign & Sitebuild')} E&Bro
+                  </a>
+              </div>
             </div>
           </div>
         </div>
