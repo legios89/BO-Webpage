@@ -76,18 +76,19 @@ var Home = React.createClass({
   render: function () {
     return (
       <div className="container-fluid">
-        <div className="row welcome-image visible-xs" style={{backgroundPosition: '0% 0px'}}>
-          <div className="pattern col-xs-12" style={{height: '250px'}}>
+        <div className="row welcome-image hidden-lg">
+          <div className="pattern col-xs-12 visible-xs" style={{height: '250px'}}>
             {this.renderWelcomeText()}
           </div>
-        </div>
-        <div className="row welcome-image hidden-xs">
           <div className="pattern col-sm-12 visible-sm" style={{height: '300px'}}>
             {this.renderWelcomeText()}
           </div>
           <div className="pattern col-md-12 visible-md" style={{height: '400px'}}>
             {this.renderWelcomeText()}
           </div>
+        </div>
+        <div className="row welcome-image visible-lg fixed-image"
+             style={{backgroundPosition: '0% -200px'}}>
           <div className="pattern col-lg-12 visible-lg" style={{height: '450px'}}>
             {this.renderWelcomeText()}
           </div>

@@ -43,8 +43,11 @@ a, a:focus, a:hover, a:active {
 .welcome-image {
   background-size: cover;
   background-image: url(/static/img/bg3.jpg);
+  background-position: 0px 0px;
+}
+
+.fixed-image {
   background-attachment: fixed;
-  background-position: 0% -200px;
 }
 
 .welcome-text {
