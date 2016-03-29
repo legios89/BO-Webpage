@@ -47,8 +47,8 @@ var App = React.createClass({
               </button>
               <a className="navbar-brand" href="#">
                 <h4 style={{marginTop: '0px'}} className="logo">
-                <span style={{color: '#E6400C'}}>Birkás </span>
-                <span style={{color: 'rgb(95, 111, 126)'}}>Orsolya</span>
+                <span className="dark-orange-color">Birkás </span>
+                <span className="blue-gray-color">Orsolya</span>
               </h4></a>
             </div>
             <div id="navbar" className="navbar-collapse collapse menu-bar">

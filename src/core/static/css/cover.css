@@ -20,7 +20,7 @@ body {
 }
 
 a, a:focus, a:hover, a:active {
-  color: #e6400c;
+  color: #E8A996;
   outline: 0;
   text-decoration: none;
 }
@@ -51,9 +51,9 @@ a, a:focus, a:hover, a:active {
 }
 
 .welcome-text {
-  color: white;
+  color: rgb(93, 109, 124);
   margin: 100px 0px;
-  text-shadow: -2px -2px 4px #000;
+  text-shadow: -2px -2px 4px #E8E8E8;
   font-family: "PT Sans Narrow", Arial, sans-serif;
 }
 
@@ -61,6 +61,7 @@ a, a:focus, a:hover, a:active {
   background-image: url(/static/img/pattern.png);
   background-attachment: fixed;
   z-index: 1;
+  box-shadow: inset 0px 0px 50px #000;
 }
 
 .header {
@@ -118,11 +119,11 @@ a, a:focus, a:hover, a:active {
 .isay {
   margin: 30px 10px 0px 30px;;
   font-size: 24px;
-  color: #E6400C;
   position: relative;
   clear: both;
   text-align: left;
   font: 600 20px "PT Sans Narrow", Arial, sans-serif;
+  color: rgb(199, 53, 0);
 }
 
 .soft-white-bg {
@@ -141,6 +142,7 @@ a, a:focus, a:hover, a:active {
 
 .mt-code {
   margin-right: 2px;
+  color: rgb(223, 18, 42);
 }
 
 .caption-subject {
@@ -215,4 +217,24 @@ a, a:focus, a:hover, a:active {
 
 .max-width {
   width: 100%;
+}
+
+.dark-orange-color {
+  color: #db3b00;
+}
+
+.blue-gray-color {
+  color: rgb(95, 111, 126);
+}
+
+.btn-success {
+  background-color: #008A00;
+}
+
+.btn-info {
+  background-color: #00829B;
+}
+
+.btn-danger {
+  background-color: #D4423C;
 }

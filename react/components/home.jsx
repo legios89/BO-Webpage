@@ -63,7 +63,7 @@ var Home = React.createClass({
   },
 
   renderJobs: function () {
-    var colors = ['#2F353B', '#ACB5C3', '#67809F', '#E1E5EC', '#4C87B9', '#E5E5E5', '#4B77BE',
+    var colors = ['#2F353B', '#8A95A7', '#67809F', '#E1E5EC', '#4C87B9', '#E5E5E5', '#4B77BE',
                   '#525E64'];
     return this.state.jobs.map(function (job, key) {
       return (<Job job={job} color={colors[key % colors.length]} key={job.id}/>);
@@ -107,7 +107,7 @@ var Home = React.createClass({
             <h5 className="isay">
               {gettext(
                 '2012 óta pályáztatok és közvetítek ki, kis, közép és ' +
-                'multinacionális cégeknek IT szakembereket, főkép ' +
+                'multinacionális cégeknek IT szakembereket, főképp ' +
                 'fejlesztőket'
               )}
             </h5>

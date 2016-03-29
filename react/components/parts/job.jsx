@@ -47,9 +47,7 @@ var Job = React.createClass({
 
     $('.bootbox .modal-footer').append(
       ReactDOMServer.renderToString(
-        <a href={link} target="_blank" className="btn btn-info mt-info">
-          {gettext('E-mail')}
-        </a>
+        <a href={link} target="_blank" className="btn btn-info mt-info">{gettext('E-mail')}</a>
       )
     );
 
@@ -86,9 +84,7 @@ var Job = React.createClass({
     return(
       <div className="btn-group btn-group-justified" role="group" style={{marginTop: '-28px'}}>
         <div className="btn-group" role="group" style={{verticalAlign: 'initial'}}>
-          <button className={buttonClass + 'btn-primary'}
-                  onClick={this.onDescriptionClick}
-                  style={{}}>
+          <button className={buttonClass + 'btn-primary'} onClick={this.onDescriptionClick}>
             {gettext('Részletek')}
           </button>
         </div>
