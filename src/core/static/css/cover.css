@@ -51,8 +51,8 @@ a, a:focus, a:hover, a:active {
 }
 
 .welcome-text {
-  color: rgb(93, 109, 124);
-  margin: 100px 0px;
+  color: #041E35;
+  margin: 80px 0px;
   text-shadow: -2px -2px 4px #E8E8E8;
   font-family: "PT Sans Narrow", Arial, sans-serif;
 }

@@ -2,11 +2,20 @@
 var React = require('react');
 // var ReactDOM = require('react-dom');
 var ReactDOMServer = require('react-dom/server');
+var Link = require('react-router').Link;
 
 var Job = React.createClass({
   propTypes: {
-    job  : React.PropTypes.object.isRequired,
-    color: React.PropTypes.string.isRequired
+    job   : React.PropTypes.object.isRequired,
+    color : React.PropTypes.string.isRequired,
+    active: React.PropTypes.bool.isRequired,
+    push  : React.PropTypes.func.isRequired
+  },
+
+  componentDidMount: function () {
+    if (this.props.active) {
+      this.onDescriptionClick();
+    }
   },
 
   onDescriptionClick: function () {
@@ -14,7 +23,7 @@ var Job = React.createClass({
     var buttons = {
       main: {
         label    : gettext('Bezár'),
-        className: 'btn-danger mt-info'
+        className: 'btn-danger mt-info close-button'
       }
     };
     var link = 'mailto:orsolya.birkas@adecco.com?subject=' + gettext('Jelentkezés') + ': ';
@@ -51,11 +60,12 @@ var Job = React.createClass({
       )
     );
 
-    $('.bootbox').click(function (ev) {
+    $('.bootbox, .close-button, .bootbox-close-button').click(function (ev) {
       if(ev.target !== this) {
         return;
       }
       $('.bootbox').modal('hide');
+      self.props.push('/');
     });
   },
 
@@ -84,9 +94,11 @@ var Job = React.createClass({
     return(
       <div className="btn-group btn-group-justified" role="group" style={{marginTop: '-28px'}}>
         <div className="btn-group" role="group" style={{verticalAlign: 'initial'}}>
-          <button className={buttonClass + 'btn-primary'} onClick={this.onDescriptionClick}>
+          <Link className={buttonClass + 'btn-primary'}
+                onClick={this.onDescriptionClick}
+                to={'/' + this.props.job.id + '/'}>
             {gettext('Részletek')}
-          </button>
+          </Link>
         </div>
         {pdfButton}
       </div>

@@ -25,6 +25,7 @@ ReactDOM.render((
   <Router history={history}>
     <Route component={App} language={language}>
       <Route path="/" component={Home}/>
+      <Route path="/:jobId" component={Home}/>
       <Route path="*" component={NotFoundRoute}/>
     </Route>
   </Router>), mainContainer);

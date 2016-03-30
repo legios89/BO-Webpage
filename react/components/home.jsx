@@ -63,10 +63,17 @@ var Home = React.createClass({
   },
 
   renderJobs: function () {
-    var colors = ['#2F353B', '#8A95A7', '#67809F', '#E1E5EC', '#4C87B9', '#E5E5E5', '#4B77BE',
+    var self = this;
+    var colors = ['#2F353B', '#8A95A7', '#67809F', '#18305A', '#4C87B9', '#564E4E', '#4B77BE',
                   '#525E64'];
     return this.state.jobs.map(function (job, key) {
-      return (<Job job={job} color={colors[key % colors.length]} key={job.id}/>);
+      return (
+        <Job job={job}
+             color={colors[key % colors.length]}
+             active={job.id === parseInt(self.props.params.jobId, 10)}
+             push={self.props.history.push}
+             key={job.id}/>
+      );
     });
   },
 
