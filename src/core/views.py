@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from django.views.generic import View, TemplateView
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
+from django.views.decorators.cache import never_cache
 
 
 class PublishRosetta(View):
@@ -22,5 +23,6 @@ class HomePageView(TemplateView):
 
 
 class UrlsApi(APIView):
+    @never_cache
     def get(self, request, format=None):
         return Response({'job_list': reverse('job:api_job_list')})
