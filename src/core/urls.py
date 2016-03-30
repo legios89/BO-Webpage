@@ -6,6 +6,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.i18n import javascript_catalog
 from django.conf.urls.i18n import i18n_patterns
+from django.views.decorators.cache import never_cache
 
 # Project imports
 from .views import HomePageView, PublishRosetta, UrlsApi
@@ -15,7 +16,8 @@ urlpatterns = i18n_patterns(
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api-auth/', include('rest_framework.urls',
         namespace='rest_framework')),
-    url(r'^jsi18n/$', javascript_catalog, name='javascript-catalog'),
+    url(r'^jsi18n/$', never_cache(javascript_catalog),
+        name='javascript-catalog'),
     url(r'^api/urls/$', UrlsApi.as_view(), name='api_urls'),
     url(r'^rosetta/', include('rosetta.urls')),
     url(r'^api/job/', include('job.urls', namespace='job')),

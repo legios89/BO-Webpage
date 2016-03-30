@@ -2,12 +2,14 @@
 # Core and 3th party packages
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from django.views.decorators.cache import never_cache
 
 # Project imports
 from .models import Job
 
 
 class JobListApi(APIView):
+    @never_cache
     def get(self, request, format=None):
         data = []
         qs = Job.objects.filter(is_active=True).order_by('-id')
