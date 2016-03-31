@@ -47,7 +47,7 @@ var App = React.createClass({
     }
     return (
       <div className="site-wrapper-inner">
-        <GoogleAnalytics id="UA-75709903-1"/>
+        <GoogleAnalytics id="UA-75709903-1" set={{hostname: document.location.origin}}/>
         <nav className="navbar navbar-fixed-top">
           <div className="container-fluid soft-white-bg">
             <div className="navbar-header header">
