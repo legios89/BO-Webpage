@@ -1,7 +1,6 @@
 {% load staticfiles %}
 {% load compress %}
 {% load i18n %}
-{% get_current_language as LANGUAGE_CODE %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,9 +25,8 @@
     {% endcompress %}
   </head>
   <body>
-    <div class="site-wrapper" id="app-place" data-language="{{LANGUAGE_CODE}}">
-    </div>
-    <script src="/{{LANGUAGE_CODE}}/jsi18n/"></script>
+    <div class="site-wrapper" id="app-place"/>
+    <script src="/jsi18n/"></script>
     {% compress js %}
       <script src="{% static "js/jquery-1.12.0.min.js" %}"></script>
       <script src="{% static "js/bootstrap.min.js" %}"></script>

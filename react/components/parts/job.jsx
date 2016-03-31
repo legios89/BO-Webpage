@@ -11,6 +11,10 @@ var Job = React.createClass({
     active: React.PropTypes.bool.isRequired
   },
 
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
+
   /* *************** */
   /* REACT LIFECYCLE */
   /* *************** */
@@ -35,6 +39,9 @@ var Job = React.createClass({
     };
     var link = 'mailto:orsolya.birkas@adecco.com?subject=' + gettext('Jelentkezés') + ': ';
     link += this.props.job.title;
+
+    // set the document title to be specific for every job (SEO)
+    document.title = document.title.split('-')[0] += ' - ' + this.props.job.title;
 
     if (this.props.job.pdf !== null) {
       buttons.success = {
@@ -72,7 +79,7 @@ var Job = React.createClass({
         return;
       }
       $('.bootbox').modal('hide');
-      window.location.hash = '/';
+      self.context.router.push('/');
     });
   },
 
@@ -107,7 +114,7 @@ var Job = React.createClass({
         <div className="btn-group" role="group" style={{verticalAlign: 'initial'}}>
           <Link className={buttonClass + 'btn-primary'}
                 onClick={this.onDescriptionClick}
-                to={'/' + this.props.job.id + '/'}>
+                to={this.props.job.id + '/'}>
             {gettext('Részletek')}
           </Link>
         </div>

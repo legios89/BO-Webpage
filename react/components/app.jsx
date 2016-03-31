@@ -18,9 +18,8 @@ var App = React.createClass({
 
   componentWillMount: function () {
     var self = this;
-    var url = '/' + this.props.route.language + '/api/urls/';
 
-    $.get(url, function (response) {
+    $.get('/api/urls/', function (response) {
       self.setState({urls: response, canLoad: true});
     });
   },
