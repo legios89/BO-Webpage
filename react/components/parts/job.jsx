@@ -8,15 +8,22 @@ var Job = React.createClass({
   propTypes: {
     job   : React.PropTypes.object.isRequired,
     color : React.PropTypes.string.isRequired,
-    active: React.PropTypes.bool.isRequired,
-    push  : React.PropTypes.func.isRequired
+    active: React.PropTypes.bool.isRequired
   },
+
+  /* *************** */
+  /* REACT LIFECYCLE */
+  /* *************** */
 
   componentDidMount: function () {
     if (this.props.active) {
       this.onDescriptionClick();
     }
   },
+
+  /* *************** */
+  /* CHANGE HANDLERS */
+  /* *************** */
 
   onDescriptionClick: function () {
     var self = this;
@@ -65,9 +72,13 @@ var Job = React.createClass({
         return;
       }
       $('.bootbox').modal('hide');
-      self.props.push('/');
+      window.location.hash = '/';
     });
   },
+
+  /* ************* */
+  /* RENDER BLOCKS */
+  /* ************* */
 
   renderCategories: function () {
     return this.props.job.categories.map(function (category, key) {
@@ -104,6 +115,10 @@ var Job = React.createClass({
       </div>
     );
   },
+
+  /* *********** */
+  /* MAIN RENDER */
+  /* *********** */
 
   render: function () {
     return (

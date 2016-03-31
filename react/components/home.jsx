@@ -71,7 +71,6 @@ var Home = React.createClass({
         <Job job={job}
              color={colors[key % colors.length]}
              active={job.id === parseInt(self.props.params.jobId, 10)}
-             push={self.props.history.push}
              key={job.id}/>
       );
     });

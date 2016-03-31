@@ -1,11 +1,16 @@
 /* global gettext, $ */
 var React = require('react');
+var GoogleAnalytics = require('react-g-analytics');
 
 var App = React.createClass({
   propTypes: {
     children: React.PropTypes.any,
     route   : React.PropTypes.object
   },
+
+  /* *************** */
+  /* REACT LIFECYCLE */
+  /* *************** */
 
   getInitialState: function () {
     return {urls: {}, canLoad: false};
@@ -20,6 +25,10 @@ var App = React.createClass({
     });
   },
 
+  /* *************** */
+  /* CHANGE HANDLERS */
+  /* *************** */
+
   scrollTo: function (event) {
     var target = event.target.dataset.target;
     if (target === 'home') {
@@ -29,12 +38,17 @@ var App = React.createClass({
     }
   },
 
+  /* *********** */
+  /* MAIN RENDER */
+  /* *********** */
+
   render: function () {
     if (!this.state.canLoad) {
       return (<span></span>);
     }
     return (
       <div className="site-wrapper-inner">
+        <GoogleAnalytics id="UA-75709903-1"/>
         <nav className="navbar navbar-fixed-top">
           <div className="container-fluid soft-white-bg">
             <div className="navbar-header header">
