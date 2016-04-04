@@ -1,13 +1,14 @@
+@font-face {
+  font-family: "PT Sans Narrow";
+  src: url(/static/fonts/PTS76F.ttf) format("truetype");
+}
+
 body {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
   background: #f2ebe6;
-}
-
-@font-face {
-  font-family: "PT Sans Narrow";
-  src: url(/static/fonts/pt_sans_narrow.woff2) format("truetype");
+  font-family: "PT Sans Narrow", Arial, sans-serif;
 }
 
 .site-wrapper {
@@ -169,6 +170,7 @@ a, a:focus, a:hover, a:active {
   color: black;
   text-align: left;
   text-shadow: none;
+  font-family: initial;
 }
 
 .modal-title {

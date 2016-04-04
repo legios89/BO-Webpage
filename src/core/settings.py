@@ -124,6 +124,8 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder'
 )
 
+COMPRESS_CSS_HASHING_METHOD = None
+
 # Debug toolbar visibility fix
 DEBUG_TOOLBAR_CONFIG = {
     'SHOW_TOOLBAR_CALLBACK': lambda x: DEBUG,
