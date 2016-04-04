@@ -1,6 +1,12 @@
 {
   "private": true,
   "main": "router.jsx",
+  "browserify": {
+    "transform": [
+      "babelify",
+      "envify"
+    ]
+  },
   "scripts": {
     "build": "browserify -t [ babelify --presets [ react ] ] components/router.jsx -o $npm_config_static_root/react/app.js",
     "watch": "watchify components/router.jsx -v -o /src/core/static/react/app.js -t [ babelify --presets [ react ] ] --debug"
@@ -12,6 +18,7 @@
     "babel-preset-react": "6.5.0",
     "browserify": "13.0.0",
     "watchify": "3.7.0",
+    "envify": "3.4.0",
     "react-router": "2.0.1",
     "lodash": "4.6.1",
     "react-g-analytics": "0.2.5"

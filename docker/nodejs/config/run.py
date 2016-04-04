@@ -11,6 +11,7 @@ def run():
     ensure_dir('/data/static/react', owner='developer', group='developer')
     run_cmd(['npm', 'config', 'set', 'static_root', getvar('STATIC_ROOT')],
             user='developer')
+    run_daemon(['npm', 'prune'], user='developer', exit_on_finish=False)
     run_daemon(['npm', 'install'], user='developer', exit_on_finish=False)
 
 

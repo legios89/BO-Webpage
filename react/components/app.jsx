@@ -18,7 +18,6 @@ var App = React.createClass({
 
   componentWillMount: function () {
     var self = this;
-
     $.get('/api/urls/', function (response) {
       self.setState({urls: response, canLoad: true});
     });
@@ -37,17 +36,23 @@ var App = React.createClass({
     }
   },
 
+  renderGoogleAnalytics: function () {
+    if (process.env.DEBUG === 'False') {
+      return (<GoogleAnalytics id="UA-75709903-1" set={{hostname: document.location.origin}}/>);
+    }
+  },
+
   /* *********** */
   /* MAIN RENDER */
   /* *********** */
 
   render: function () {
     if (!this.state.canLoad) {
-      return (<span></span>);
+      return (<span>{gettext('Oldal betöltés folyamatban!')}</span>);
     }
     return (
       <div className="site-wrapper-inner">
-        <GoogleAnalytics id="UA-75709903-1" set={{hostname: document.location.origin}}/>
+        {this.renderGoogleAnalytics()}
         <nav className="navbar navbar-fixed-top">
           <div className="container-fluid soft-white-bg">
             <div className="navbar-header header">
@@ -58,7 +63,7 @@ var App = React.createClass({
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <a className="navbar-brand" href="#">
+              <a className="navbar-brand" href="#" rel="nofollow">
                 <h4 style={{marginTop: '0px'}} className="logo">
                 <span className="dark-orange-color">Birkás </span>
                 <span className="blue-gray-color">Orsolya</span>
@@ -70,17 +75,17 @@ var App = React.createClass({
                   <li>
                     <a href="javascript:void(0);" onClick={this.scrollTo}
                        data-target="home">
-                      <i className="fa fa-home" data-target="home"></i>
+                      <i className="fa fa-home" data-target="home" rel="nofollow"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="javascript:void(0);" onClick={this.scrollTo}
+                    <a href="javascript:void(0);" onClick={this.scrollTo} rel="nofollow"
                        data-target="about_me">
                       {gettext('Rólam')}
                     </a>
                   </li>
                   <li>
-                    <a href="javascript:void(0);" onClick={this.scrollTo}
+                    <a href="javascript:void(0);" onClick={this.scrollTo} rel="nofollow"
                        data-target="jobs">
                       {gettext('Állások')}
                     </a>
