@@ -240,3 +240,7 @@ a, a:focus, a:hover, a:active {
 .btn-danger {
   background-color: #D4423C;
 }
+
+.modal-dialog {
+  margin: 0px auto;
+}

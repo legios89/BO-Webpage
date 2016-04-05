@@ -12,7 +12,6 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from .views import HomePageView, PublishRosetta, UrlsApi
 
 urlpatterns = [
-    url(r'^$', HomePageView.as_view(), name='home'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api-auth/', include('rest_framework.urls',
         namespace='rest_framework')),

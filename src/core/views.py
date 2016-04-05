@@ -6,7 +6,6 @@ from django.views.generic import View, TemplateView
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.views.decorators.cache import never_cache
-from django.utils.cache import patch_vary_headers
 
 
 class PublishRosetta(View):
@@ -21,13 +20,6 @@ class PublishRosetta(View):
 
 class HomePageView(TemplateView):
     template_name = "home.html"
-
-    def render_to_response(self, context, **response_kwargs):
-        # Get response from parent TemplateView class
-        response = super(HomePageView, self).render_to_response(
-            context, **response_kwargs)
-        patch_vary_headers(response, ('Accept-Encoding',))
-        return response
 
 
 class UrlsApi(APIView):
