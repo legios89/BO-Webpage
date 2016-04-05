@@ -42,14 +42,17 @@ var App = React.createClass({
     }
   },
 
+  renderChild: function () {
+    if (this.state.canLoad) {
+      return React.cloneElement(this.props.children, {urls: this.state.urls});
+    }
+  },
+
   /* *********** */
   /* MAIN RENDER */
   /* *********** */
 
   render: function () {
-    if (!this.state.canLoad) {
-      return (<span>{gettext('Oldal betöltés folyamatban!')}</span>);
-    }
     return (
       <div className="site-wrapper-inner">
         {this.renderGoogleAnalytics()}
@@ -95,7 +98,7 @@ var App = React.createClass({
             </div>
           </div>
         </nav>
-        {React.cloneElement(this.props.children, {urls: this.state.urls})}
+        {this.renderChild()}
       </div>);
   }
 });

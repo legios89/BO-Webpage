@@ -244,3 +244,11 @@ a, a:focus, a:hover, a:active {
 .modal-dialog {
   margin: 0px auto;
 }
+
+.modal-header .close {
+    margin-top: -12px;
+}
+
+.close {
+  font-size: 40px;
+}
