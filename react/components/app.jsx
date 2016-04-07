@@ -29,11 +29,7 @@ var App = React.createClass({
 
   scrollTo: function (event) {
     var target = event.target.dataset.target;
-    if (target === 'home') {
-      window.scrollTo(0, 0);
-    } else {
-      document.getElementById(target).scrollIntoView({block: 'start', behavior: 'smooth'});
-    }
+    document.getElementById(target).scrollIntoView({block: 'start', behavior: 'smooth'});
   },
 
   renderGoogleAnalytics: function () {
@@ -78,7 +74,7 @@ var App = React.createClass({
                   <li>
                     <a href="javascript:void(0);" onClick={this.scrollTo}
                        data-target="home">
-                      <i className="fa fa-home" data-target="home" rel="nofollow"></i>
+                      <i className="fa fa-home" data-target="app-place" rel="nofollow"></i>
                     </a>
                   </li>
                   <li>
