@@ -3,6 +3,8 @@
   src: url(/static/fonts/PTS76F.ttf) format("truetype");
 }
 
+html, body {height:100%;overflow:auto}
+
 body {
   color: #fff;
   text-align: center;
