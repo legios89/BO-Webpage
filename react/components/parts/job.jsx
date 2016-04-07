@@ -102,15 +102,14 @@ var Job = React.createClass({
           <a href={this.props.job.pdf}
              className={buttonClass + 'btn-success'}
              target="_blank"
-             ref="pdfButton"
-             style={{}}>
+             ref="pdfButton">
             {gettext('Letöltés')}
           </a>
         </div>
       );
     }
     return(
-      <div className="btn-group btn-group-justified" role="group" style={{marginTop: '-28px'}}>
+      <div className="btn-group btn-group-justified" role="group">
         <div className="btn-group" role="group" style={{verticalAlign: 'initial'}}>
           <Link className={buttonClass + 'btn-primary'}
                 onClick={this.onDescriptionClick}
