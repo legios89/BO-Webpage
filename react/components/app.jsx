@@ -5,7 +5,12 @@ var GoogleAnalytics = require('react-g-analytics');
 var App = React.createClass({
   propTypes: {
     children: React.PropTypes.any,
-    route   : React.PropTypes.object
+    route   : React.PropTypes.object,
+    routes  : React.PropTypes.any
+  },
+
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
   },
 
   /* *************** */
@@ -28,8 +33,13 @@ var App = React.createClass({
   /* *************** */
 
   scrollTo: function (event) {
+    var routes = this.props.routes;
     var target = event.target.dataset.target;
-    document.getElementById(target).scrollIntoView({block: 'start', behavior: 'smooth'});
+    if (routes[routes.length - 1].component.displayName === 'NotFoundRoute') {
+      this.context.router.push('/');
+    } else {
+      document.getElementById(target).scrollIntoView({block: 'start', behavior: 'smooth'});
+    }
   },
 
   renderGoogleAnalytics: function () {

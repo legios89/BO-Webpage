@@ -11,10 +11,9 @@ var createBrowserHistory = require('react-router/node_modules/history/lib/create
 var App = require('./app.jsx');
 var Home = require('./home.jsx');
 
-
 var NotFoundRoute = React.createClass({
   render: function () {
-    return (<div>{gettext('Nem Található!')}</div>);
+    return (<div className="not-found blue-gray-color">{gettext('Nem Található!')}</div>);
   }
 });
 
@@ -25,7 +24,7 @@ ReactDOM.render((
   <Router history={appHistory}>
     <Route component={App}>
       <Route path="/" component={Home}/>
-      <Route path="/:jobId" component={Home}/>
+      <Route path="/job/:jobId" component={Home}/>
       <Route path="*" component={NotFoundRoute}/>
     </Route>
   </Router>), mainContainer);

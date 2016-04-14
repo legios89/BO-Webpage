@@ -113,7 +113,7 @@ var Job = React.createClass({
         <div className="btn-group" role="group" style={{verticalAlign: 'initial'}}>
           <Link className={buttonClass + 'btn-primary'}
                 onClick={this.onDescriptionClick}
-                to={'/' + this.props.job.id}>
+                to={'/job/' + this.props.job.id}>
             {gettext('Részletek')}
           </Link>
         </div>
