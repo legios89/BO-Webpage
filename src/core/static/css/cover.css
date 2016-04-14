@@ -23,6 +23,7 @@ body {
 
 .site-wrapper-inner {
   background-color: #fff;
+  border: 1px solid #E6E6E6;
 }
 
 a, a:focus, a:hover, a:active {
