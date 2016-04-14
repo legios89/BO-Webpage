@@ -1,7 +1,10 @@
+# coding: utf-8
+# Core and 3th party packages
 from django.contrib import admin
 from django import forms
 from tinymce.widgets import TinyMCE
 
+# Project imports
 from .models import Job, Category, JobCategory
 
 
