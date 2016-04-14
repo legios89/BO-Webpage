@@ -81,7 +81,7 @@ var Home = React.createClass({
   /* *********** */
   render: function () {
     return (
-      <div className="container-fluid">
+      <div>
         <div className="row welcome-image hidden-lg">
           <div className="pattern col-xs-12 visible-xs" style={{height: '250px'}}>
             {this.renderWelcomeText()}

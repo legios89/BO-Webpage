@@ -60,10 +60,10 @@ var App = React.createClass({
 
   render: function () {
     return (
-      <div className="site-wrapper-inner">
+      <div className="site-wrapper-inner container">
         {this.renderGoogleAnalytics()}
-        <nav className="navbar navbar-fixed-top">
-          <div className="container-fluid soft-white-bg">
+        <nav className="navbar row">
+          <div className="soft-white-bg">
             <div className="navbar-header header">
               <button type="button" className="navbar-toggle collapsed"
                       data-toggle="collapse" data-target="#navbar"
