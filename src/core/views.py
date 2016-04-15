@@ -31,14 +31,15 @@ class HomePageView(TemplateView):
     def get(self, request, *args, **kwargs):
         ctx = self.get_context_data(**kwargs)
         ctx['title'] = _('Birkás Orsolya Toborzási és Kiválasztási Tanácsadó')
-        ctx['fb_image'] = static('img/profile.jpg')
+        ctx['main_title'] = ctx['title']
+        ctx['image'] = static('img/profile.jpg')
         ctx['desc'] = _('Birkás Orsolya Toborzási és Kiválasztási '
                         'Tanácsadó honlapja és aktuális állás ajánlatai')
         if request.path[0:5] == '/job/':
             try:
                 job = Job.objects.get(pk=int(request.path[5:]), is_active=True)
                 ctx['title'] += ' - ' + job.title
-                ctx['fb_image'] = job.image.url
+                ctx['image'] = job.image.url
                 ctx['desc'] += ' - ' + job.title
             except:
                 log.exception('Wrong url!')

@@ -9,11 +9,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{desc}}">
     <meta name="author" content="Birkás Orsolya">
-    <meta property="og:image" content="{{fb_image}}" />
+    <meta property="og:image" content="{{image}}"/>
+    <meta name="twitter:card" content="{{main_title}}">
+    <meta name="twitter:site" content="@BirkasOrsolya">
+    <meta name="twitter:creator" content="@BirkasOrsolya">
+    <meta name="twitter:title" content="{{title}}">
+    <meta name="twitter:description" content="{{desc}}">
+    <meta name="twitter:image" content="{{image}}">
     <title>{{title}}</title>
     <meta name="google-site-verification"
-          content="oCjm-ldvoKNgFG4yv_gA0K-A58i7CN44AJPM6cPC7jM" />
-    <link rel="icon" type="image/x-icon" href="/static/img/favicon.png" />
+          content="oCjm-ldvoKNgFG4yv_gA0K-A58i7CN44AJPM6cPC7jM"/>
+    <link rel="icon" type="image/x-icon" href="{% static "img/favicon.png" %}"/>
     {% compress css %}
       <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
       <link href="{% static "css/mt.css" %}" rel="stylesheet">
