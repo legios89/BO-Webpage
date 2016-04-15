@@ -40,12 +40,12 @@ var Home = React.createClass({
   jobHeightFix: function () {
     var correctBlockHeight = 0;
     var correctTitleHeight = 0;
-    $('.caption-subject').height('auto');
-    _.forEach($('.caption-subject'), function (element) {
+    $('.caption').height('auto');
+    _.forEach($('.caption'), function (element) {
       var height = $(element).height();
       correctTitleHeight = height > correctTitleHeight ? height : correctTitleHeight;
     });
-    $('.caption-subject').height(correctTitleHeight);
+    $('.caption').height(correctTitleHeight);
 
     _.forEach($('.job-image'), function (element) {
       var ratio = element.width / element.attributes.width.value;

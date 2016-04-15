@@ -150,6 +150,7 @@ a, a:focus, a:hover, a:active {
 .mt-code {
   margin-right: 2px;
   color: rgb(223, 18, 42);
+  display: inline-flex;
 }
 
 .caption-subject {
