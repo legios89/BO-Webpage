@@ -32,14 +32,14 @@ class HomePageView(TemplateView):
         ctx = self.get_context_data(**kwargs)
         ctx['title'] = _('Birkás Orsolya Toborzási és Kiválasztási Tanácsadó')
         ctx['main_title'] = ctx['title']
-        ctx['image'] = static('img/profile.jpg')
+        ctx['image'] = request.build_absolute_uri(static('img/profile.jpg'))
         ctx['desc'] = _('Birkás Orsolya Toborzási és Kiválasztási '
                         'Tanácsadó honlapja és aktuális állás ajánlatai')
         if request.path[0:5] == '/job/':
             try:
                 job = Job.objects.get(pk=int(request.path[5:]), is_active=True)
                 ctx['title'] += ' - ' + job.title
-                ctx['image'] = job.image.url
+                ctx['image'] = request.build_absolute_uri(job.image.url)
                 ctx['desc'] += ' - ' + job.title
             except:
                 log.exception('Wrong url!')
