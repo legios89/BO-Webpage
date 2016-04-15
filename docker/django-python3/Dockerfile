@@ -13,7 +13,7 @@ RUN set -x && apt-get update && DEBIAN_FRONTEND=noninteractive \
 
 RUN pip3 install \
       uwsgi==2.0.12 \
-      django==1.9.4 \
+      django==1.9.5 \
       psycopg2==2.6.1 \
       django-debug-toolbar==1.4 \
       djangorestframework==3.3.3 \
@@ -25,6 +25,6 @@ RUN pip3 install \
       django-compressor==2.0 \
       django-imagekit==3.3 \
       django-modeltranslation==0.11 \
-      django-rosetta==0.7.10 \
-      pillow==3.1.1 \
+      django-rosetta==0.7.11 \
+      pillow==3.2.0 \
       django-tinymce==2.3.0
