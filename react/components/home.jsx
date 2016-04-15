@@ -106,9 +106,13 @@ var Home = React.createClass({
           </div>
           <div className="col-md-6">
             <h4 className="about-me">
-              <p><b>{gettext('Üdvözlöm!')}</b></p>
-              <p>{gettext('Birkás Orsolya vagyok.')}</p>
-              <p>{gettext('Toborzási és Kiválasztási Tanácsadó.')}</p>
+              <p><b className="highlight">{gettext('Üdvözlöm!')}</b></p>
+              <p><span className="highlight">{gettext('Birkás Orsolya vagyok.')}</span></p>
+              <p>
+                <span className="highlight">
+                  {gettext('Toborzási és Kiválasztási Tanácsadó.')}
+                </span>
+              </p>
             </h4>
             <h5 className="isay">
               {gettext(

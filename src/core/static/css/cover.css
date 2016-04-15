@@ -130,7 +130,7 @@ a, a:focus, a:hover, a:active {
   clear: both;
   text-align: left;
   font: 600 20px "PT Sans Narrow", Arial, sans-serif;
-  color: rgb(199, 53, 0);
+  color: #2C3E50;
 }
 
 .soft-white-bg {
@@ -268,4 +268,8 @@ a, a:focus, a:hover, a:active {
 .navbar {
   margin-bottom: 5px;
   border: none;
+}
+
+.highlight {
+  border-bottom: solid 2px #db3b00;
 }
