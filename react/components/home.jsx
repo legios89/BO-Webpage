@@ -59,7 +59,12 @@ var Home = React.createClass({
   /* RENDER BLOCKS */
   /* ************* */
   renderWelcomeText: function () {
-    return (<h1 className="welcome-text">{gettext('Toborzási és Kiválasztási Tanácsadó')}</h1>);
+    return (
+      <div>
+        <h1 className="welcome-text">{gettext('IT Recriutment Consultant')}</h1>
+        <h2 className="welcome-text">{gettext('Ha új állást keresel')}</h2>
+      </div>
+    );
   },
 
   renderJobs: function () {
@@ -102,7 +107,7 @@ var Home = React.createClass({
         <div className="content-space" id="about_me"></div>
          <div className="row">
           <div className="col-md-6 no-padding">
-            <img src="/static/img/profile.jpg" className="max-width" alt="profile"/>
+            <img src="/static/img/profile2.jpg" className="max-width" alt="profile"/>
           </div>
           <div className="col-md-6">
             <h4 className="about-me">
@@ -159,9 +164,9 @@ var Home = React.createClass({
             <div className="col-xs-12 no-padding">
               <div className="col-xs-1"></div>
               <div className="no-padding col-xs-9 e-bro-block">
-                  <a href="https://github.com/legios89/BO-Webpage" className="block">
-                    {gettext('Webdesign & Sitebuild')} E&Bro
-                  </a>
+                <span href="javascript;" className="block">
+                  {gettext('Webdesign & Sitebuild')} E&Bro
+                </span>
               </div>
             </div>
           </div>
