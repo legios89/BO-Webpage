@@ -111,19 +111,19 @@ var Home = React.createClass({
           </div>
           <div className="col-md-6">
             <h4 className="about-me">
-              <p><b className="highlight">{gettext('Üdvözlöm!')}</b></p>
-              <p><span className="highlight">{gettext('Birkás Orsolya vagyok.')}</span></p>
+              <p><b className="highlight">{gettext('Üdv!')}</b></p>
               <p>
                 <span className="highlight">
-                  {gettext('Toborzási és Kiválasztási Tanácsadó.')}
+                  {gettext(
+                    'Birkás Orsolya vagyok, 2014 óta foglalkozom kizárólag IT Recruitment-el.'
+                  )}
                 </span>
               </p>
             </h4>
             <h5 className="isay">
               {gettext(
-                '2012 óta pályáztatok és közvetítek ki, kis, közép és ' +
-                'multinacionális cégeknek IT szakembereket, főképp ' +
-                'fejlesztőket'
+                'Bízom benne, hogy az aktuális állaslehetőségek között megtaláljuk közösen a ' +
+                'megfelelőt számodra.'
               )}
             </h5>
           </div>

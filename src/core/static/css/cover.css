@@ -272,3 +272,7 @@ a, a:focus, a:hover, a:active {
 .highlight {
   border-bottom: solid 2px #db3b00;
 }
+
+.bootbox-body {
+  word-break: break-word;
+}
