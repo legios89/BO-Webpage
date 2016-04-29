@@ -32,7 +32,7 @@ class HomePageView(TemplateView):
         ctx = self.get_context_data(**kwargs)
         ctx['title'] = _('Birkás Orsolya Toborzási és Kiválasztási Tanácsadó')
         ctx['main_title'] = ctx['title']
-        ctx['image'] = request.build_absolute_uri(static('img/profile.jpg'))
+        ctx['image'] = request.build_absolute_uri(static('img/profile2.jpg'))
         ctx['desc'] = _('Birkás Orsolya Toborzási és Kiválasztási '
                         'Tanácsadó honlapja és aktuális állás ajánlatai')
         if request.path[0:5] == '/job/':
