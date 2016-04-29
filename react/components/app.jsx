@@ -44,7 +44,7 @@ var App = React.createClass({
 
   renderGoogleAnalytics: function () {
     if (process.env.DEBUG === 'False') {
-      return (<GoogleAnalytics id="UA-75709903-1" set={{hostname: document.location.origin}}/>);
+      return (<GoogleAnalytics id="UA-75709903-2" set={{hostname: document.location.origin}}/>);
     }
   },
 
