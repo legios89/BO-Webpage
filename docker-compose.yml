@@ -47,7 +47,7 @@ django:
         PYTHONUNBUFFERED: "true"
     env_file: env.txt
     ports:
-        - "80:8000"
+        - "8000:8000"
 
 nodejs:
     hostname: birkas_orsi-nodejs
