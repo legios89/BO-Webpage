@@ -61,7 +61,7 @@ var Home = React.createClass({
   renderWelcomeText: function () {
     return (
       <div>
-        <h1 className="welcome-text">{gettext('IT Recriutment Consultant')}</h1>
+        <h1 className="welcome-text">{gettext('IT Recruitment Consultant')}</h1>
         <h2 className="welcome-text">{gettext('Ha új állást keresel')}</h2>
       </div>
     );
