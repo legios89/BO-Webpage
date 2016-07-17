@@ -37,7 +37,7 @@ var Job = React.createClass({
         className: 'btn-danger mt-info close-button'
       }
     };
-    var link = 'mailto:orsolya.birkas@adecco.com?subject=' + gettext('Jelentkezés') + ': ';
+    var link = 'mailto:orsolya.birkas@budapestbank.hu?subject=' + gettext('Jelentkezés') + ': ';
     link += this.props.job.title;
 
     // set the document title to be specific for every job (SEO)

@@ -136,8 +136,8 @@ var Home = React.createClass({
           <div className="col-sm-7 contact-description">
             <div>
               <span>{gettext('E-mail') + ': '}</span>
-              <a href="mailto:orsolya.birkas@adecco.com" target="_blank">
-                orsolya.birkas@adecco.com
+              <a href="mailto:orsolya.birkas@budapestbank.hu" target="_blank">
+                orsolya.birkas@budapestbank.hu
               </a><br/>
               <span>{gettext('Telefon') + ': 06308689742'}</span>
             </div>
