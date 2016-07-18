@@ -139,7 +139,7 @@ var Home = React.createClass({
               <a href="mailto:orsolya.birkas@budapestbank.hu" target="_blank">
                 orsolya.birkas@budapestbank.hu
               </a><br/>
-              <span>{gettext('Telefon') + ': 06308689742'}</span>
+              <span>{gettext('Telefon') + ': 06706260140'}</span>
             </div>
           </div>
           <div className="col-sm-5 no-padding">
